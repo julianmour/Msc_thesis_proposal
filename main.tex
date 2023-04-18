@@ -17,7 +17,7 @@
 \usepackage{graphicx}
 \usepackage{lifetime}
 \newcommand{\Dana}[1]{\textcolor{purple}{\bf Dana: #1}}
-\newcommand{\Tom}[1]{\textcolor{purple}{\bf Julian: #1}}
+\newcommand{\Julian}[1]{\textcolor{purple}{\bf Julian: #1}}
 
 
 \begin{document}
@@ -35,7 +35,7 @@
 
 \section{Introduction}
 
-In the last years, many works have demonstrated that deep neural networks (DNNs) are susceptible to a variety of adversarial example attacks, e.g.,~\cite{ref7,ref15,szegedy2014intriguing,ref17,ref29,ref56}. Most adversarial attacks add small changes to the input that fool the network. However, some attacks, known as $L_0$ attacks, focus on perturbing a very small number of pixels (e.g., one) to an arbitrary value~\cite{OnePixelAttack, alatalo2021chromatic, vargas2019understanding}. This type of attack is very effective for concealing adversarial modification in practice, and it can provide geometrical theoretical insight into the input space of a classifier. %Previous studies have shown that given an input image and a classifier (e.g. convolutional neural network), a perturbation of a single pixel or a very small and almost imperceptible perturbation of all pixels in the input image\cite{szegedy2014intriguing} can lead to misclassification. 
+In the last years, many works have demonstrated that deep neural networks (DNNs) are susceptible to a variety of adversarial example attacks, e.g.,~\cite{ref7,ref15,szegedy2014intriguing,ref17,ref29,ref56}. Most adversarial attacks add small changes to the input that fool the network. However, some attacks, known as $L_0$ attacks, focus on perturbing a very small number of pixels (e.g., one) to an arbitrary value~\cite{OnePixelAttack, alatalo2021chromatic, vargas2019understanding}. This type of attack is very effective for concealing adversarial modification in practice, and it can provide geometrical theoretical insight into the input space of a classifier. %Previous studies have shown that given an input image and a classifier (e.g. convolutional neural network), a perturbation of a single pixel or a very small and almost imperceptible perturbation of all pixels in the input image\cite{szegedy2014intriguing} can lead to misclassification.
 %Examining different approaches for adversarial attacks may help network designers gain a deeper understanding of the vulnerabilities of their networks and then utilize that information to improve the network's robustness.\Dana{a bit general}
 These attacks are usually local: for each input, they perform a computation to determine the perturbation, which may take a few minutes. Furthermore, these attacks are not robust to input transformation, so each input must be processed differently.
 
