@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.2)  18 APR 2023 16:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.2)  26 APR 2023 20:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -477,279 +477,332 @@ Package hyperref Info: Link coloring ON on input line 23.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-
-
-Package natbib Warning: Citation `ref7' on page 1 undefined on input line 38.
-
-
-Package natbib Warning: Citation `ref15' on page 1 undefined on input line 38.
-
-
-Package natbib Warning: Citation `szegedy2014intriguing' on page 1 undefined on
- input line 38.
-
-
-Package natbib Warning: Citation `ref17' on page 1 undefined on input line 38.
-
-
-Package natbib Warning: Citation `ref29' on page 1 undefined on input line 38.
-
-
-Package natbib Warning: Citation `ref56' on page 1 undefined on input line 38.
-
-
-Package natbib Warning: Citation `OnePixelAttack' on page 1 undefined on input 
-line 38.
-
-
-Package natbib Warning: Citation `alatalo2021chromatic' on page 1 undefined on 
-input line 38.
-
-
-Package natbib Warning: Citation `vargas2019understanding' on page 1 undefined 
-on input line 38.
-
-
-Package natbib Warning: Citation `he2015deep' on page 1 undefined on input line
- 52.
-
-
-Package natbib Warning: Citation `OnePixelAttack' on page 1 undefined on input 
-line 52.
-
-[1
+ [1
 
 {C:/Users/julianmour/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-main.tex:63: Undefined control sequence.
-\@sharp ->\sum _{i=1}^n \mathbbm 
-                                 {1}_{class(N(P(x_i)))\neq c_i}
-l.63 ...^n \mathbbm{1}_{class(N(P(x_i)))\neq c_i}}
-                                                  \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 7
+8.
+(C:\Users\julianmour\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 78.
 
+main.tex:83: Missing } inserted.
+<inserted text> 
+                }
+l.83 \end{gather*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-Package natbib Warning: Citation `GOLDBERG199169' on page 2 undefined on input 
-line 73.
+main.tex:83: Missing $ inserted.
+<inserted text> 
+                $
+l.83 \end{gather*}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
+main.tex:83: Missing { inserted.
+<inserted text> 
+                {
+l.83 \end{gather*}
+                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
-Package natbib Warning: Citation `real2019regularized' on page 2 undefined on i
-nput line 73.
+main.tex:83: Missing } inserted.
+<inserted text> 
+                }
+l.83 \end{gather*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-main.tex:84: Undefined control sequence.
-<argument> \sum _{i=1}^n \mathbbm 
-                                  {1}_{class(N(P(x_i)))\neq c_i \land class(...
-l.84 ...m_{i=1}^n \mathbbm{1}_{class(N(x_i))=c_i}}
-                                                   \cdot 100
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+main.tex:83: Missing $ inserted.
+<inserted text> 
+                $
+l.83 \end{gather*}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-main.tex:84: Undefined control sequence.
-<argument> \sum _{i=1}^n \mathbbm 
-                                  {1}_{class(N(x_i))=c_i}
-l.84 ...m_{i=1}^n \mathbbm{1}_{class(N(x_i))=c_i}}
-                                                   \cdot 100
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+main.tex:83: Missing $ inserted.
+<inserted text> 
+                $
+l.83 \end{gather*}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.tex:83: Missing $ inserted.
+<inserted text> 
+                $
+l.83 \end{gather*}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.tex:83: Missing { inserted.
+<inserted text> 
+                {
+l.83 \end{gather*}
+                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+main.tex:83: Missing } inserted.
+<inserted text> 
+                }
+l.83 \end{gather*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+main.tex:83: Missing $ inserted.
+<inserted text> 
+                $
+l.83 \end{gather*}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.tex:83: Missing { inserted.
+<inserted text> 
+                {
+l.83 \end{gather*}
+                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+main.tex:83: Missing } inserted.
+<inserted text> 
+                }
+l.83 \end{gather*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+main.tex:83: Missing $ inserted.
+<inserted text> 
+                $
+l.83 \end{gather*}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.tex:83: Missing $ inserted.
+<inserted text> 
+                $
+l.83 \end{gather*}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.tex:83: Missing $ inserted.
+<inserted text> 
+                $
+l.83 \end{gather*}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.tex:83: Missing { inserted.
+<inserted text> 
+                {
+l.83 \end{gather*}
+                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+main.tex:91: Missing } inserted.
+<inserted text> 
+                }
+l.91 \end{gather*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+main.tex:91: Missing $ inserted.
+<inserted text> 
+                $
+l.91 \end{gather*}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.tex:91: Missing { inserted.
+<inserted text> 
+                {
+l.91 \end{gather*}
+                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+main.tex:91: Missing } inserted.
+<inserted text> 
+                }
+l.91 \end{gather*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+main.tex:91: Missing $ inserted.
+<inserted text> 
+                $
+l.91 \end{gather*}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.tex:91: Missing { inserted.
+<inserted text> 
+                {
+l.91 \end{gather*}
+                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+main.tex:91: Missing } inserted.
+<inserted text> 
+                }
+l.91 \end{gather*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+main.tex:91: Missing $ inserted.
+<inserted text> 
+                $
+l.91 \end{gather*}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.tex:91: Missing { inserted.
+<inserted text> 
+                {
+l.91 \end{gather*}
+                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+main.tex:91: Missing } inserted.
+<inserted text> 
+                }
+l.91 \end{gather*}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+main.tex:91: Missing $ inserted.
+<inserted text> 
+                $
+l.91 \end{gather*}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+main.tex:91: Missing { inserted.
+<inserted text> 
+                {
+l.91 \end{gather*}
+                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
 [2]
-
-Package natbib Warning: Citation `OnePixelAttack' on page 3 undefined on input 
-line 88.
-
-<success_rate.png, id=58, 396.48125pt x 260.975pt>
-File: success_rate.png Graphic file (type png)
-<use success_rate.png>
-Package pdftex.def Info: success_rate.png  used on input line 94.
-(pdftex.def)             Requested size: 181.18439pt x 119.26149pt.
-<execution_time.png, id=60, 401.5pt x 255.95625pt>
-File: execution_time.png Graphic file (type png)
-<use execution_time.png>
-Package pdftex.def Info: execution_time.png  used on input line 101.
-(pdftex.def)             Requested size: 181.18439pt x 115.50731pt.
-<number_queries.png, id=61, 406.51875pt x 255.95625pt>
-File: number_queries.png Graphic file (type png)
-<use number_queries.png>
-Package pdftex.def Info: number_queries.png  used on input line 108.
-(pdftex.def)             Requested size: 181.18439pt x 114.07787pt.
-
-Package natbib Warning: Citation `vaswani2017attention' on page 3 undefined on 
-input line 119.
-
-[3 <./success_rate.png> <./execution_time.png> <./number_queries.png>]
-
-Package natbib Warning: Citation `ribeiro2016why' on page 4 undefined on input 
-line 120.
-
-
-Package natbib Warning: Citation `taxonomy' on page 4 undefined on input line 1
-27.
-
-
-Package natbib Warning: Citation `papernot2015limitations' on page 4 undefined 
-on input line 129.
-
-
-Package natbib Warning: Citation `ref7' on page 4 undefined on input line 129.
-
-
-Package natbib Warning: Citation `ref7' on page 4 undefined on input line 130.
-
-
-Package natbib Warning: Citation `papernot2015limitations' on page 4 undefined 
-on input line 130.
-
-
-Package natbib Warning: Citation `moosavidezfooli2016deepfool' on page 4 undefi
-ned on input line 130.
-
-
-Package natbib Warning: Citation `moosavidezfooli2017universal' on page 4 undef
-ined on input line 130.
-
-
-Package natbib Warning: Citation `khrulkov2017art' on page 4 undefined on input
- line 130.
-
-
-Package natbib Warning: Citation `mopuri2018nag' on page 4 undefined on input l
-ine 130.
-
-
-Package natbib Warning: Citation `szegedy2014intriguing' on page 4 undefined on
- input line 131.
-
-
-Package natbib Warning: Citation `ref7' on page 4 undefined on input line 131.
-
-
-Package natbib Warning: Citation `papernot2015limitations' on page 4 undefined 
-on input line 131.
-
-
-Package natbib Warning: Citation `moosavidezfooli2016deepfool' on page 4 undefi
-ned on input line 131.
-
-
-Package natbib Warning: Citation `BlackBox1' on page 4 undefined on input line 
-131.
-
-
-Package natbib Warning: Citation `BlackBox2' on page 4 undefined on input line 
-131.
-
-
-Package natbib Warning: Citation `BlackBox3' on page 4 undefined on input line 
-131.
-
-
-Package natbib Warning: Citation `BlackBox4' on page 4 undefined on input line 
-131.
-
-
-Package natbib Warning: Citation `OnePixelAttack' on page 4 undefined on input 
-line 134.
-
-
-Package natbib Warning: Citation `alatalo2021chromatic' on page 4 undefined on 
-input line 134.
-
-
-Package natbib Warning: Citation `vargas2019understanding' on page 4 undefined 
-on input line 134.
-
-
-Package natbib Warning: Citation `inbook' on page 4 undefined on input line 138
-.
-
-
-Package natbib Warning: Citation `d39antoni2016qlose' on page 4 undefined on in
-put line 138.
-
-
-Package natbib Warning: Citation `10.1145/2594291.2594321' on page 4 undefined 
-on input line 138.
-
-
-Package natbib Warning: Citation `nori2015efficient' on page 4 undefined on inp
-ut line 138.
-
-
-Package natbib Warning: Citation `10.1145/36206.36194' on page 4 undefined on i
-nput line 138.
-
-
-Package natbib Warning: Citation `6679385' on page 4 undefined on input line 13
-9.
-
-
-Package natbib Warning: Citation `inbook' on page 4 undefined on input line 139
-.
-
-
-Package natbib Warning: Citation `CSP' on page 4 undefined on input line 139.
-
-
-Package natbib Warning: Citation `schkufza2012stochastic' on page 4 undefined o
-n input line 139.
-
-
-Package natbib Warning: Citation `parisotto2016neurosymbolic' on page 4 undefin
-ed on input line 139.
-
-
-Package natbib Warning: Citation `Koza92' on page 4 undefined on input line 139
-.
-
-[4]
-No file main.bbl.
-
-Package natbib Warning: There were undefined citations.
-
-[5]
+<3.png, id=81, 64.24pt x 64.24pt>
+File: 3.png Graphic file (type png)
+<use 3.png>
+Package pdftex.def Info: 3.png  used on input line 133.
+(pdftex.def)             Requested size: 181.18439pt x 181.19896pt.
+<no_defense_fixed_weights.png, id=82, 462.528pt x 346.896pt>
+File: no_defense_fixed_weights.png Graphic file (type png)
+<use no_defense_fixed_weights.png>
+Package pdftex.def Info: no_defense_fixed_weights.png  used on input line 148.
+(pdftex.def)             Requested size: 181.18439pt x 135.88702pt.
+<no_defense_sensitivity_weights.png, id=84, 462.528pt x 346.896pt>
+File: no_defense_sensitivity_weights.png Graphic file (type png)
+<use no_defense_sensitivity_weights.png>
+Package pdftex.def Info: no_defense_sensitivity_weights.png  used on input line
+ 155.
+(pdftex.def)             Requested size: 181.18439pt x 135.88702pt.
+ [3 <./3.png (PNG copy)>] [4 <./no_defense_fixed_weights.png> <./no_defense_sen
+sitivity_weights.png>]
+Overfull \hbox (31.844pt too wide) in paragraph at lines 201--207
+\OT1/cmr/m/n/10.95 wrangling[[]], code repair[[]], code suggestions[[]], prob-a
+-bilis-tic modeling[[]] and superoptimization[[]].
+ []
+
+
+(C:/Users\julianmour\OneDrive - Technion\Documents\Research\Proposal\auxil\main
+.bbl [5] [6]) [7]
 (C:/Users\julianmour\OneDrive - Technion\Documents\Research\Proposal\auxil\main
 .aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: ADCE11E61EC2755B5B47A24A3B7F0678;1071.
  ) 
 Here is how much of TeX's memory you used:
- 11713 strings out of 478351
- 190948 string characters out of 2834693
- 506703 words of memory out of 3000000
- 29977 multiletter control sequences out of 15000+600000
- 476015 words of font info for 51 fonts, out of 8000000 for 9000
+ 11879 strings out of 478351
+ 194561 string characters out of 2834693
+ 508033 words of memory out of 3000000
+ 30099 multiletter control sequences out of 15000+600000
+ 476469 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,8n,77p,1168b,537s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,10n,77p,306b,685s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\julianmour\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600
 \tcrm1095.pk><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/amsfonts/cm/cmbx10.pfb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/julianmour/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/julianmour/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/
-julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.p
-fb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmmi8.pfb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmr10.pfb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/julianmour/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/julianmour/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ju
-lianmour/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pf
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/julianmour/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/j
+ulianmour/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pf
 b><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmsy8.pfb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmti10.pfb>
+s/cm/cmr12.pfb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr17.pfb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/julianmour/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/julianmour/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ju
+lianmour/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pf
+b>
 Output written on "C:/Users\julianmour\OneDrive - Technion\Documents\Research\P
-roposal\out\main.pdf" (5 pages, 202887 bytes).
+roposal\out\main.pdf" (7 pages, 248448 bytes).
 PDF statistics:
- 142 PDF objects out of 1000 (max. 8388607)
- 15 named destinations out of 1000 (max. 500000)
+ 233 PDF objects out of 1000 (max. 8388607)
+ 54 named destinations out of 1000 (max. 500000)
  80 words of extra memory for PDF output out of 10000 (max. 10000000)
 
