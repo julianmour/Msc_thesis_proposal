@@ -1,0 +1,192 @@
+\begin{thebibliography}{10}
+
+\bibitem{alatalo2021chromatic}
+Janne Alatalo, Joni Korpihalkola, Tuomo Sipola, and Tero Kokkonen.
+\newblock Chromatic and spatial analysis of one-pixel attacks against an image
+  classifier, 2021.
+
+\bibitem{6679385}
+Rajeev Alur, Rastislav Bodik, Garvit Juniwal, Milo M.~K. Martin, Mukund
+  Raghothaman, Sanjit~A. Seshia, Rishabh Singh, Armando Solar-Lezama, Emina
+  Torlak, and Abhishek Udupa.
+\newblock Syntax-guided synthesis.
+\newblock In {\em 2013 Formal Methods in Computer-Aided Design}, pages 1--8,
+  2013.
+
+\bibitem{d39antoni2016qlose}
+Loris D'Antoni, Roopsha Samanta, and Rishabh Singh.
+\newblock Qlose: Program repair with quantiative objectives.
+\newblock In {\em 27th International Conference on Computer Aided Verification
+  (CAV 2016)}, July 2016.
+
+\bibitem{CSP}
+K.~Ghédira and B.~Dubuisson.
+\newblock Constraint satisfaction problems: Csp formalisms and techniques.
+\newblock {\em Constraint Satisfaction Problems: CSP Formalisms and
+  Techniques}, 02 2013.
+
+\bibitem{ref7}
+Ian~J. Goodfellow, Jonathon Shlens, and Christian Szegedy.
+\newblock Explaining and harnessing adversarial examples.
+\newblock {\em In ICLR}, 2015.
+
+\bibitem{inbook}
+S.~Gulwani.
+\newblock {\em Programming by examples (and its applications in data
+  wrangling)}, pages 137--158.
+\newblock 04 2016.
+
+\bibitem{he2015deep}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
+\newblock Deep residual learning for image recognition, 2015.
+
+\bibitem{BlackBox3}
+Andrew Ilyas, Logan Engstrom, Anish Athalye, and Jessy Lin.
+\newblock Black-box adversarial attacks with limited queries and information.
+\newblock {\em CoRR}, abs/1804.08598, 2018.
+
+\bibitem{MARVEL}
+Anan Kabaha and Dana~Drachsler Cohen.
+\newblock Maximal robust neural network specifications via oracle-guided
+  numerical optimization.
+\newblock {\em VMCAI}, 2023.
+
+\bibitem{khrulkov2017art}
+Valentin Khrulkov and Ivan Oseledets.
+\newblock Art of singular vectors and universal adversarial perturbations,
+  2017.
+
+\bibitem{Koza92}
+John~R. Koza.
+\newblock {\em Genetic Programming: {O}n the Programming of Computers by Means
+  of Natural Selection}.
+\newblock MIT Press, Cambridge, MA, USA, 1992.
+
+\bibitem{ref15}
+Alexey Kurakin, Ian~J. Goodfellow, and Samy Bengio.
+\newblock Adversarial examples in the physical world.
+\newblock {\em In ICLR}, 2017.
+
+\bibitem{ref56}
+Aleksander Madry, Aleksandar Makelov, Ludwig Schmidt, Dimitris Tsipras, and
+  Adrian Vladu.
+\newblock Towards deep learning models resistant to adversarial attacks.
+\newblock {\em In ICLR}, 2018.
+
+\bibitem{10.1145/36206.36194}
+Henry Massalin.
+\newblock Superoptimizer: A look at the smallest program.
+\newblock ASPLOS II, page 122–126, Washington, DC, USA, 1987. IEEE Computer
+  Society Press.
+
+\bibitem{BlackBox4}
+Laurent Meunier, Jamal Atif, and Olivier Teytaud.
+\newblock Yet another but more efficient black-box adversarial attack: tiling
+  and evolution strategies.
+\newblock {\em CoRR}, abs/1910.02244, 2019.
+
+\bibitem{moosavidezfooli2017universal}
+Seyed-Mohsen Moosavi-Dezfooli, Alhussein Fawzi, Omar Fawzi, and Pascal
+  Frossard.
+\newblock Universal adversarial perturbations, 2017.
+
+\bibitem{moosavidezfooli2016deepfool}
+Seyed-Mohsen Moosavi-Dezfooli, Alhussein Fawzi, and Pascal Frossard.
+\newblock Deepfool: a simple and accurate method to fool deep neural networks,
+  2016.
+
+\bibitem{mopuri2018nag}
+Konda~Reddy Mopuri, Utkarsh Ojha, Utsav Garg, and R.~Venkatesh Babu.
+\newblock Nag: Network for adversary generation, 2018.
+
+\bibitem{nori2015efficient}
+Aditya Nori, Sherjil Ozair, Sriram Rajamani, and Deepak~and Vijaykeerthy.
+\newblock Efficient synthesis of probabilistic programs.
+\newblock In {\em Programming Language Design and Implementation (PLDI)}. ACM -
+  Association for Computing Machinery, June 2015.
+
+\bibitem{papernot2015limitations}
+Nicolas Papernot, Patrick McDaniel, Somesh Jha, Matt Fredrikson, Z.~Berkay
+  Celik, and Ananthram Swami.
+\newblock The limitations of deep learning in adversarial settings, 2015.
+
+\bibitem{BlackBox1}
+Nicolas Papernot, Patrick~D. McDaniel, Ian~J. Goodfellow, Somesh Jha, Z.~Berkay
+  Celik, and Ananthram Swami.
+\newblock Practical black-box attacks against deep learning systems using
+  adversarial examples.
+\newblock {\em CoRR}, abs/1602.02697, 2016.
+
+\bibitem{parisotto2016neurosymbolic}
+Emilio Parisotto, Abdel rahman Mohamed, Rishabh Singh, Lihong Li, Dengyong
+  Zhou, and Pushmeet Kohli.
+\newblock Neuro-symbolic program synthesis, 2016.
+
+\bibitem{BlackBox2}
+Hao Qiu, Leonardo~Lucio Custode, and Giovanni Iacca.
+\newblock Black-box adversarial attacks using evolution strategies.
+\newblock {\em CoRR}, abs/2104.15064, 2021.
+
+\bibitem{10.1145/2594291.2594321}
+Veselin Raychev, Martin Vechev, and Eran Yahav.
+\newblock Code completion with statistical language models.
+\newblock PLDI '14, page 419–428, New York, NY, USA, 2014. Association for
+  Computing Machinery.
+
+\bibitem{ribeiro2016why}
+Marco~Tulio Ribeiro, Sameer Singh, and Carlos Guestrin.
+\newblock "why should i trust you?": Explaining the predictions of any
+  classifier, 2016.
+
+\bibitem{schkufza2012stochastic}
+Eric Schkufza, Rahul Sharma, and Alex Aiken.
+\newblock Stochastic superoptimization, 2012.
+
+\bibitem{VANILLAGRADIENT}
+Andrea~Vedaldi Simonyan, Karen and Andrew Zisserman.
+\newblock Deep inside convolutional networks: Visualising image classification
+  models and saliency maps., 2013.
+
+\bibitem{OnePixelAttack}
+Jiawei Su, Danilo~Vasconcellos Vargas, and Kouichi Sakurai.
+\newblock One pixel attack for fooling deep neural networks.
+\newblock {\em IEEE Transactions on Evolutionary Computation}, 23(5):828–841,
+  Oct 2019.
+
+\bibitem{szegedy2014intriguing}
+Christian Szegedy, Wojciech Zaremba, Ilya Sutskever, Joan Bruna, Dumitru Erhan,
+  Ian Goodfellow, and Rob Fergus.
+\newblock Intriguing properties of neural networks, 2014.
+
+\bibitem{ref17}
+Pedro Tabacof and Eduardo Valle.
+\newblock Exploring the space of adversarial images.
+\newblock {\em In IJCNN}, 2016.
+
+\bibitem{vargas2019understanding}
+Danilo~Vasconcellos Vargas and Jiawei Su.
+\newblock Understanding the one-pixel attack: Propagation maps and locality
+  analysis, 2019.
+
+\bibitem{vaswani2017attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N. Gomez, Lukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need, 2017.
+
+\bibitem{MIPVERIFY}
+Russ~Tedrake Vincent~Tjeng, Kai~Xiao.
+\newblock Evaluating robustness of neural networks with mixed integer
+  programming.
+\newblock {\em ICLR}, 2019.
+
+\bibitem{taxonomy}
+Junde Wu and Rao Fu.
+\newblock Universal, transferable and targeted adversarial attacks.
+\newblock 08 2019.
+
+\bibitem{ref29}
+Xiaoyong Yuan, Pan He, Qile Zhu, and Xiaolin Li.
+\newblock Adversarial examples: Attacks and defenses for deep learning.
+\newblock {\em In {IEEE} Trans. Neural Networks Learn. Syst}, 2019.
+
+\end{thebibliography}
