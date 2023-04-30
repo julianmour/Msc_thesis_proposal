@@ -177,7 +177,11 @@ While the three of them solve the same classification problem, they differ in th
          \caption{$L_0$ Defense}
          \label{fig:L0 defense}
     \end{figure}
-    \item Network with $L_{\infty}$ defense -
+    \item Network with $L_{\infty}$ defense - This network is trained with $L_{\infty}$ defense.
+    To achieve this kind of defense, we also use data-augmentation, but this time we use PGD (Projected Gradient Descent)~\cite{PGD}.
+    This also involves training the model with adversarial examples, but unlike the $L_0$ defense, the added perturbations can be anywhere in the input.
+    The PGD generated adversarial examples are achieved by trying to increase the model's loss function as much as possible.
+    Therefore, training the model with such adversarial examples should make the network more robust.
 \end{itemize}
 
 
