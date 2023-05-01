@@ -1,0 +1,16 @@
+%! Author = julianmour
+%! Date = 01/05/2023
+
+\section{Future Research Objectives}
+In light of the preliminary work, we aim to further explore our ideas in the following directions:
+\begin{itemize}
+    \item Improved algorithm: Maximizing the neighborhood norm, execution time and number of queries -
+    The main challenge in using our above-mentioned approach is the calculation of the weakest points that are later used by the optimizer to compute the RL gradient.
+    Where in the regular single-label case at most $|C|$ queries are executed per iteration to achieve an accurate and unbiased RL gradient, this number jumps to $|C|^2$ in the multi-label case if the same approach as MaRVeL's is used, leading to a much longer execution time.
+    Also, we aim to maximize the neighborhood norm;
+    We want to achieve wide robust layer-neighborhoods.
+    This can be affected by many factors (e.g.\ the shrinking method used in the algorithm) - we will explore each of these factors and look for the best methods to achieve this goal.
+    \item Explainability - The goal of our program is to present a relation between two objects in an image for a specific multi-label classifier.
+    The results can tell us how much and where we can change in one object so that it doesn't or does affect the other.
+    These can vary between different classifiers as well, which will also help us understand which type of multi-label networks are most vulnerable to perturbations in different locations in their inputs.
+\end{itemize}

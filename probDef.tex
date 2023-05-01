@@ -1,0 +1,24 @@
+%! Author = julianmour
+%! Date = 01/05/2023
+
+\section{Problem Definition}
+In this section, we define the problem we address.
+
+Informally, we are interested in developing an efficient algorithm that given a single image, it returns a robust layer-neighborhood for a target object (target class);
+A robust sequence of epsilons each representing the perturbation per layer.
+Each layer is defined to be a set of pixels that share the same distance from a specific non-target object (non-target class) in the image.
+
+Formally, Given a classifier $F$, an image $x$ of size $n\times m$ containing two objects: $c_{target}$ and $c_{non-target}$ \textrm{s.t.} $F(x)$ = \{$c_{target}$, $c_{non-target}$\},
+we define the set of layers to be:
+\begin{gather*}
+    $ L_x = \{l_0^x, l_1^x, \ldots, l_r^x\}\\
+    \textrm{s.t.} $ l_d^x = \{(i,j) \in $[1,n]\times [1,m]$ \mid dist((i, j), c_{non-target}) = d\}
+\end{gather*}
+
+We aim to build a program that returns a sequence of epsilons $(\varepsilon_0^x, \varepsilon_1^x, \ldots, \varepsilon_r^x)$ representing a robust perturbations of the pixels in the corresponding layers for the target class.
+Formally:
+\begin{gather*}
+    $ \varepsilon_x = (\varepsilon_0^x, \varepsilon_1^x, \ldots, \varepsilon_r^x)\\
+    \textrm{s.t.} $ \forall x' \in N(x): c_{target} \in F(x')\\
+    N(x) = \{x' \mid \forall l_d^x\in L_x: \forall (i,j)\in l_d^x: x'_{i,j} \in [x_{i,j}-\varepsilon_d^x, x_{i,j}+\varepsilon_d^x]\}\\
+\end{gather*}
