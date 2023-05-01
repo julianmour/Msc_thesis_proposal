@@ -37,6 +37,23 @@ Jonathon~Shlens Ian J~Goodfellow and Christian Szegedy.
 \newblock Explaining and harnessing adversarial examples.
 \newblock {\em International Conference on Learning Representations}, 2015.
 
+\bibitem{OracleGuided}
+Gulwani S. Seshia S.A.-Tiwari~A. Jha, S.
+\newblock Oracle-guided component-based program synthesis.
+\newblock {\em ICSE}, 2010.
+
+\bibitem{DoubleMNIST}
+Gulwani S. Seshia S.A.-Tiwari A.Sara Sabour Nicholas Frosst Geoffrey E.~Hinton
+  Jha, S.
+\newblock Dynamic routing between capsules.
+\newblock {\em NeurIPS}, 2017.
+
+\bibitem{MultiVul2}
+Neil~Gong Jinyuan~Jia, Wenjie~Qu.
+\newblock Multiguard: Provably robust multi-label classification against
+  adversarial examples.
+\newblock {\em Advances in Neural Information Processing Systems}, 2022.
+
 \bibitem{MARVEL}
 Anan Kabaha and Dana~Drachsler Cohen.
 \newblock Maximal robust neural network specifications via oracle-guided
@@ -59,6 +76,21 @@ Aleksander Madry, Aleksandar Makelov, Ludwig Schmidt, Dimitris Tsipras, and
 \newblock Towards deep learning models resistant to adversarial attacks.
 \newblock {\em In ICLR}, 2018.
 
+\bibitem{IMAGETAGGING}
+Kilian~Weinberger Minmin~Chen, Alice~Zheng.
+\newblock Fast image tagging.
+\newblock {\em Proceedings of the 30th International Conference on Machine
+  Learning}, 2013.
+
+\bibitem{ObjectDetection}
+Poggio~T Papageorgiou, C.
+\newblock A trainable system for object detection.
+\newblock {\em International Journal of Computer Vision}, 2000.
+
+\bibitem{MultiVul1}
+Bernhard~Schölkopf Rohit~Babbar.
+\newblock Adversarial extreme multi-label classification, 2018.
+
 \bibitem{SINGLElABEL4}
 Alhussein~Fawzi Seyed-Mohsen Moosavi-Dezfooli and Pascal Frossard.
 \newblock Deepfool: a simple and accurate method to fool deep neural networks.
@@ -70,10 +102,29 @@ Xin Wang-Siwei~Lyu Shu~Hu, Lipeng~Ke.
 \newblock Tkml-ap: Adversarial attacks to top-k multi-label learning.
 \newblock {\em ICCV}, 2021.
 
+\bibitem{FacialRec}
+Xiaojiang Peng-Jianfei Yang Zhaoyang Zeng Yu~Qiao Sijie~Ji, Kai~Wang.
+\newblock Multiple transfer learning and multi-label balanced training
+  strategies for facial au detection in the wild.
+\newblock {\em Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR) Workshops}, 2020.
+
 \bibitem{VANILLAGRADIENT}
 Andrea~Vedaldi Simonyan, Karen and Andrew Zisserman.
 \newblock Deep inside convolutional networks: Visualising image classification
   models and saliency maps., 2013.
+
+\bibitem{MultiVul3}
+Angelo Sotgiu-Ambra Demontis Battista Biggio Marco~Gori Stefano~Melacci,
+  Gabriele~Ciravegna.
+\newblock Domain knowledge alleviates adversarial attacks in multi-label
+  classifiers.
+\newblock {\em IEEE}, 2022.
+
+\bibitem{L0}
+Bernt~Schiele Sukrut~Rao, David~Stutz.
+\newblock Adversarial training against location-optimized adversarial patches.
+\newblock {\em ECCV}, 2020.
 
 \bibitem{szegedy2014intriguing}
 Christian Szegedy, Wojciech Zaremba, Ilya Sutskever, Joan Bruna, Dumitru Erhan,

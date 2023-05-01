@@ -11,50 +11,70 @@ However, many works have demonstrated that deep neural networks (DNNs) are susce
 These attacks add a small perturbation to a correctly classified input with the goal of causing the network to misclassify.
 In particular, several works have shown the vulnerability of multi-label image classifiers~\cite{MultiVul1, MultiVul2, MultiVul3}.
 %\Dana{add at least three citations}.
-To understand the robustness level of image classifiers, many verifiers have been introduced \Dana{add many citations}.
+To understand the robustness level of image classifiers, many verifiers have been introduced~\cite{MIPVERIFY, INCOMPLETE1, INCOMPLETE2, COMPLETE, ABSTRACTINTER}.
+%\Dana{add many citations}.
 However, no verifier analyzes the robustness level of multi-label classifiers. %, where a single instance (e.g.\ an image) is associated with a single label, not mentioning the case of multi-label classifiers where an image can be associated with more than one label.
 %The association of two or more labels to a single image can be interesting when it comes to the network's vulnerability to perturbations;
 %How can a perturbed object in an image affect the classification of another?
 
 \paragraph{Challenges} Part of the challenge is defining what robustness means in multi-label classifiers.
 For (single label) classifiers, a popular definition is \emph{local robustness}.
-At high-level, given an image classifier, an input to the classifier, and a perturbation limit, the classifier is locally robust if perturbing the given input up to the given limit does not change the network's classification. \Dana{explain why the straight forward extension of the definition is problematic}.
-Even given a suitable definition, verifying multi-label classifiers is challenging because they tend to be deeper than single label classifiers\Dana{true?}. \Dana{are there other challenges?}
+At high-level, given an image classifier, an input to the classifier, and a perturbation limit, the classifier is locally robust if perturbing the given input up to the given limit does not change the network's classification.
+%\Dana{explain why the straight forward extension of the definition is problematic}.
+In multi-label, since we have more than one correct label, local robustness could be ambiguous;
+Is a perturbed input allowed to change some correct labels in a locally robust classifier?
+Or maybe none are allowed to change?
+Even given a suitable definition, verifying multi-label classifiers is challenging because they tend to be deeper and more complex than single label classifiers.
+%\Dana{true}
+%\Dana{are there other challenges?}
 
 \paragraph{Multi-label classifier robustness}
 In this thesis, we propose a new definition for local robustness of multi-label classifiers.
-At high level, given a multi-label classifier, an input containing several objects and a perturbation limit, the network is robust if \Dana{complete as in the previous sentence}. T
-his definition allows one to understand: \Dana{complete the motivation to this definition}.
+At high level, given a multi-label classifier, an input containing several objects and a perturbation limit (that depends on the perturbation's distance from a non-target object), the network is robust if perturbing the given input up to the given limit does not change the network's target object classification.
+%\Dana{complete as in the previous sentence}.
+This definition allows one to understand how changing a specific object in a multi-labeled image affects another's classification in a multi-label classifiers, and define a relation between these two objects regarding the vulnerability of one to another.
+%\Dana{complete the motivation to this definition}.
  %want to explore the robustness of different multi-label classifiers in one class - the target class, while adding perturbation around another - the non-target class.
 
-\paragraph{Problem definition} Given \Dana{complete} our goal is to compute\Dana{complete}. A naive optimal algorithm \Dana{complete}. However, it is highly time consuming.
+\paragraph{Problem definition} Given an image and a multi-label classifier, our goal is to compute a maximal robust layer-neighborhood - a sequence of robust epsilons representing a robust perturbation per each layer surrounding the non-target object.
+%\Dana{complete}.
+A naive optimal algorithm is to compute a robust epsilon at a time, by order, layer by layer.
+%\Dana{complete}.
+However, it is highly time consuming.
 
-\paragraph{Key idea} To scale the analysis, our key idea is to rely on oracle-guided synthesis\Dana{add citation}.
-Namely, we propose an algorithm that iteratively expands the specification, given by the series of epsilons\Dana{make sure it's defined in the problem definition paragraph}. At each iteration, a specification is submitted to an existing verifier, capable of analyzing\Dana{complete}. Then, based on its response, we update the specification by numerical optimization, acting as the specification synthesizer.
-The synthesizer's challenges are: (1)~the specifications do not adhere to partial order and (2)~computing the gradient is challenging because\Dana{complete}.
-To cope, we propose to \Dana{complete}.
+\paragraph{Key idea} To scale the analysis, our key idea is to rely on oracle-guided synthesis~\cite{OracleGuided}.
+Namely, we propose an algorithm that iteratively expands the specification, given by the sequence of epsilons.
+%\Dana{make sure it's defined in the problem definition paragraph}
+At each iteration, a specification is submitted to an existing verifier, capable of analyzing if a layer-neighborhood of a specific image is robust.
+Then, based on its response, we update the specification by numerical optimization, acting as the specification synthesizer.
+The synthesizer's challenges are: (1)~the specifications do not adhere to partial order and (2)~computing the gradient is challenging because part of the maximization function is non-differentiable.
+To cope, we propose to use some of the verifier's outputs on the network in order to compute an estimation of the missing gradients.
 
 \paragraph{Preliminary results}
-In our preliminary research, we implemented a basic version of the above approach. We evaluate it on the DOUBLE-MNIST test dataset\Dana{add citation}.
-We ran our program on three different CNN multi-label DOUBLE-MNIST classifiers that were trained differently: without a defense, with an $L_0$-based defense\Dana{add citation} and with the PGD defense\Dana{add citation}.
-Results show that \Dana{complete}.
+In our preliminary research, we implemented a basic version of the above approach.
+We evaluate it on the DOUBLE-MNIST test dataset~\cite{DoubleMNIST}.
+We ran our program on three different CNN multi-label DOUBLE-MNIST classifiers that were trained differently: without a defense, with an $L_0$-based defense~\cite{L0} and with the PGD defense~\cite{PGD}.
+Results show that in without a defense and with an $L_0$-based defense networks, a smaller norm of layer perturbation is achieved than in networks with PGD defense. \Julian{check after getting PGD results}.
+%\Dana{complete}.
 %We present the results of the program on each classifier and a single image as a heatmap representing the sequence of epsilons - one epsilon per layer.
 \paragraph{Future goals}
-As part of the thesis, we intend to improve our algorithm by reducing the number of queries to the verifier, and thereby shortening the execution time. To this end, we plan to \Dana{complete how you'll do it}.
-We also plan to compute wider robust layer-neighborhoods by \Dana{compelte how you think you'll do it}.
+As part of the thesis, we intend to improve our algorithm by reducing the number of queries to the verifier, and thereby shortening the execution time.
+To this end, we plan to use faster incomplete verifiers for some queries where robustness/non-robustness can still be determined.
+We also plan to compute wider robust layer-neighborhoods by focusing on less sensitive layers, where the network can handle bigger perturbations.
+%\Dana{compelte how you think you'll do it}
 %We also hope to achieve a better understanding of the vulnerability of multi-label classifiers to perturbations and the relation between several class objects in a multi-labeled image.
 
-\Dana{below is the old text need to be rewritten as part of previous paragraphs}
-
-We first build layers around the non-target object in the image.
-Each layer can be perturbed by an epsilon (defined specifically for this layer), while maintaining robustness for the target class - not affecting the classification of the target class.
-Meaning, we want a sequence of epsilons that for a specific classifier and image, defines a robust layer-neighborhood for the target class.
-To get best results, we want the layer-neighborhood to be maximal.
-\Dana{this mixes definition and algorithm -- need to separate}
-
-Our key idea is to compute the sequence of epsilons by verifying and optimizing it in each step, rather than computing each epsilon individually.
-Given a sequence of epsilons representing an epsilon of perturbation per layer, we check if the layer-neighborhood of a specific image is robust for the target object by running a robustness verifier on it and a specific classifier.
-To optimize a robust layer-neighborhood, we compute some gradients in which we can expand our neighborhood and try to keep it robust.
-Similarly, we might need to shrink a non-robust layer-neighborhood so that it becomes robust.
-The shrinking process can be done in several ways, such as defining a shrinking weight for each layer.
-Weights can be fixed (defined by the index of the layer) or not (e.g.\ sensitivity weights).
+%\Dana{below is the old text need to be rewritten as part of previous paragraphs}
+%
+%We first build layers around the non-target object in the image.
+%Each layer can be perturbed by an epsilon (defined specifically for this layer), while maintaining robustness for the target class - not affecting the classification of the target class.
+%Meaning, we want a sequence of epsilons that for a specific classifier and image, defines a robust layer-neighborhood for the target class.
+%To get best results, we want the layer-neighborhood to be maximal.
+%\Dana{this mixes definition and algorithm -- need to separate}
+%
+%Our key idea is to compute the sequence of epsilons by verifying and optimizing it in each step, rather than computing each epsilon individually.
+%Given a sequence of epsilons representing an epsilon of perturbation per layer, we check if the layer-neighborhood of a specific image is robust for the target object by running a robustness verifier on it and a specific classifier.
+%To optimize a robust layer-neighborhood, we compute some gradients in which we can expand our neighborhood and try to keep it robust.
+%Similarly, we might need to shrink a non-robust layer-neighborhood so that it becomes robust.
+%The shrinking process can be done in several ways, such as defining a shrinking weight for each layer.
+%Weights can be fixed (defined by the index of the layer) or not (e.g.\ sensitivity weights).
