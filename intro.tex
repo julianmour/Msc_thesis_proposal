@@ -3,27 +3,36 @@
 
 \section{Introduction}
 
-Multi-label image classifiers are successful in various tasks
-\Dana{give at least three examples and include citations.} A multi-label image classifier\Dana{define in one sentence}.
-However, many works have demonstrated that deep neural networks (DNNs) are susceptible to adversarial example attacks, e.g.,~\cite{ref7,ref15,szegedy2014intriguing,ref17,ref29,ref56}. These attacks add a small perturbation to a correctly classified input with the goal of causing the network to misclassify.
-In particular, several works have shown the vulnerability of multi-label image classifiers \Dana{add at least three citations}.
+Multi-label image classifiers are successful in various tasks such as Image Tagging~\cite{IMAGETAGGING}, Object Detection~\cite{ObjectDetection}, Facial Expression Recognition~\cite{FacialRec} etc.
+%\Dana{give at least three examples and include citations.}
+A multi-label image classifier is amodel that assigns multiple labels or tags to an image to describe its contents or attributes.
+%\Dana{define in one sentence}.
+However, many works have demonstrated that deep neural networks (DNNs) are susceptible to adversarial example attacks, e.g.,~\cite{ref7,ref15,szegedy2014intriguing,ref17,ref29,ref56}.
+These attacks add a small perturbation to a correctly classified input with the goal of causing the network to misclassify.
+In particular, several works have shown the vulnerability of multi-label image classifiers~\cite{MultiVul1, MultiVul2, MultiVul3}.
+%\Dana{add at least three citations}.
 To understand the robustness level of image classifiers, many verifiers have been introduced \Dana{add many citations}.
 However, no verifier analyzes the robustness level of multi-label classifiers. %, where a single instance (e.g.\ an image) is associated with a single label, not mentioning the case of multi-label classifiers where an image can be associated with more than one label.
 %The association of two or more labels to a single image can be interesting when it comes to the network's vulnerability to perturbations;
 %How can a perturbed object in an image affect the classification of another?
 
 \paragraph{Challenges} Part of the challenge is defining what robustness means in multi-label classifiers.
-For (single label) classifiers, a popular definition is \emph{local robustness}. At high-level, given an image classifier, an input to the classifier, and a perturbation limit, the classifier is locally robust if perturbing the given input up to the given limit does not change the network's classification. \Dana{explain why the straight forward extension of the definition is problematic}.
+For (single label) classifiers, a popular definition is \emph{local robustness}.
+At high-level, given an image classifier, an input to the classifier, and a perturbation limit, the classifier is locally robust if perturbing the given input up to the given limit does not change the network's classification. \Dana{explain why the straight forward extension of the definition is problematic}.
 Even given a suitable definition, verifying multi-label classifiers is challenging because they tend to be deeper than single label classifiers\Dana{true?}. \Dana{are there other challenges?}
 
 \paragraph{Multi-label classifier robustness}
-In this thesis, we propose a new definition for local robustness of multi-label classifiers. At high level, given a multi-label classifier, an input containing several objects and a perturbation limit, the network is robust if \Dana{complete as in the previous sentence}. This definition allows one to understand: \Dana{complete the motivation to this definition}.
+In this thesis, we propose a new definition for local robustness of multi-label classifiers.
+At high level, given a multi-label classifier, an input containing several objects and a perturbation limit, the network is robust if \Dana{complete as in the previous sentence}. T
+his definition allows one to understand: \Dana{complete the motivation to this definition}.
  %want to explore the robustness of different multi-label classifiers in one class - the target class, while adding perturbation around another - the non-target class.
 
 \paragraph{Problem definition} Given \Dana{complete} our goal is to compute\Dana{complete}. A naive optimal algorithm \Dana{complete}. However, it is highly time consuming.
 
-\paragraph{Key idea} To scale the analysis, our key idea is to rely on oracle-guided synthesis\Dana{add citation}. Namely, we propose an algorithm that iteratively expands the specification, given by the series of epsilons\Dana{make sure it's defined in the problem definition paragraph}. At each iteration, a specification is submitted to an existing verifier, capable of analyzing\Dana{complete}. Then, based on its response, we update the specification by numerical optimization, acting as the specification synthesizer.
-The synthesizer's challenges are: (1)~the specifications do not adhere to partial order and (2)~computing the gradient is challenging because\Dana{complete}. To cope, we propose to \Dana{complete}.
+\paragraph{Key idea} To scale the analysis, our key idea is to rely on oracle-guided synthesis\Dana{add citation}.
+Namely, we propose an algorithm that iteratively expands the specification, given by the series of epsilons\Dana{make sure it's defined in the problem definition paragraph}. At each iteration, a specification is submitted to an existing verifier, capable of analyzing\Dana{complete}. Then, based on its response, we update the specification by numerical optimization, acting as the specification synthesizer.
+The synthesizer's challenges are: (1)~the specifications do not adhere to partial order and (2)~computing the gradient is challenging because\Dana{complete}.
+To cope, we propose to \Dana{complete}.
 
 \paragraph{Preliminary results}
 In our preliminary research, we implemented a basic version of the above approach. We evaluate it on the DOUBLE-MNIST test dataset\Dana{add citation}.
