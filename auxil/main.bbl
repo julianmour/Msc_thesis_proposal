@@ -1,21 +1,52 @@
 \begin{thebibliography}{10}
 
+\bibitem{SINGLElABEL1}
+Naveed Akhtar and Ajmal Mian.
+\newblock Threat of adversarial attacks on deep learning in computer vision: A
+  survey.
+\newblock {\em IEEE}, 2018.
+
 \bibitem{PGD}
-Ludwig Schmidt Dimitris Tsipras Adrian~Vladu Aleksander~Madry,
+Ludwig Schmidt-Dimitris Tsipras Adrian~Vladu Aleksander~Madry,
   Aleksandar~Makelov.
 \newblock Towards deep learning models resistant to adversarial attacks.
 \newblock {\em ICLR}, 2018.
+
+\bibitem{SINGLElABEL2}
+Nicholas Carlini and David Wagner.
+\newblock Towards evaluating the robustness of neural networks.
+\newblock {\em IEEE}, 2017.
+
+\bibitem{ABSTRACTINTER}
+Markus Püschel-Martin~Vechev Gagandeep~Singh, Timon~Gehr.
+\newblock An abstract domain for certifying neural networks.
+\newblock {\em ACM}, 2019.
+
+\bibitem{INCOMPLETE2}
+Matthew Mirman-Markus Püschel Martin~Vechev Gagandeep~Singh, Timon~Gehr.
+\newblock Fast and effective robustness certification.
+\newblock {\em NeurIPS}, 2018.
 
 \bibitem{ref7}
 Ian~J. Goodfellow, Jonathon Shlens, and Christian Szegedy.
 \newblock Explaining and harnessing adversarial examples.
 \newblock {\em In ICLR}, 2015.
 
+\bibitem{SINGLElABEL3}
+Jonathon~Shlens Ian J~Goodfellow and Christian Szegedy.
+\newblock Explaining and harnessing adversarial examples.
+\newblock {\em International Conference on Learning Representations}, 2015.
+
 \bibitem{MARVEL}
 Anan Kabaha and Dana~Drachsler Cohen.
 \newblock Maximal robust neural network specifications via oracle-guided
   numerical optimization.
 \newblock {\em VMCAI}, 2023.
+
+\bibitem{COMPLETE}
+Shiqi Wang-Yihan Wang Suman Jana Xue Lin Cho-Jui~Hsieh Kaidi~Xu, Huan~Zhang.
+\newblock Fast and complete: Enabling complete neural network verification with
+  rapid and massively parallel incomplete verifiers, 11 2020.
 
 \bibitem{ref15}
 Alexey Kurakin, Ian~J. Goodfellow, and Samy Bengio.
@@ -27,6 +58,17 @@ Aleksander Madry, Aleksandar Makelov, Ludwig Schmidt, Dimitris Tsipras, and
   Adrian Vladu.
 \newblock Towards deep learning models resistant to adversarial attacks.
 \newblock {\em In ICLR}, 2018.
+
+\bibitem{SINGLElABEL4}
+Alhussein~Fawzi Seyed-Mohsen Moosavi-Dezfooli and Pascal Frossard.
+\newblock Deepfool: a simple and accurate method to fool deep neural networks.
+\newblock {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, 2016.
+
+\bibitem{MULTIlABEL}
+Xin Wang-Siwei~Lyu Shu~Hu, Lipeng~Ke.
+\newblock Tkml-ap: Adversarial attacks to top-k multi-label learning.
+\newblock {\em ICCV}, 2021.
 
 \bibitem{VANILLAGRADIENT}
 Andrea~Vedaldi Simonyan, Karen and Andrew Zisserman.
@@ -42,6 +84,13 @@ Christian Szegedy, Wojciech Zaremba, Ilya Sutskever, Joan Bruna, Dumitru Erhan,
 Pedro Tabacof and Eduardo Valle.
 \newblock Exploring the space of adversarial images.
 \newblock {\em In IJCNN}, 2016.
+
+\bibitem{INCOMPLETE1}
+Timon Gehr; Matthew Mirman; Dana Drachsler-Cohen; Petar Tsankov; Swarat
+  Chaudhuri;~Martin Vechev.
+\newblock Safety and robustness certification of neural networks with abstract
+  interpretation.
+\newblock {\em IEEE}, 2018.
 
 \bibitem{MIPVERIFY}
 Russ~Tedrake Vincent~Tjeng, Kai~Xiao.

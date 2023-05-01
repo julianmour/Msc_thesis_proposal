@@ -200,29 +200,34 @@ In light of the preliminary work, we aim to further explore our ideas in the fol
 \end{itemize}
 
 \section{Related Work}
-%Our thesis lies at the intersection of adversarial attacks and program synthesis. We next review some
-%related work.
-%\subsection{Adversarial Attacks}
-%Several aspects can be used to classify adversarial attacks~\cite{taxonomy}:
-%\begin{itemize}
-%    \item Targeted Vs. Untargeted - A targeted attack~\cite{papernot2015limitations} attempts to mislead a classifier by classifying input to a \textit{specific class} that differs from the true class of input.
-%    In untargeted attacks~\cite{ref7}, the goal is to cause the classifier to classify the input to \textit{any class} that is different from the true class.
-%    \item Individual Vs. Universal - Individual attacks generate different attacks for each different input, by optimizing the attack based on the input~\cite{ref7,papernot2015limitations,moosavidezfooli2016deepfool}.
-%    Universal attacks, on the other hand, generate one attack for all possible inputs.
-%    Studies from the last few years have indicated that universal adversarial attacks are capable of generalizing well to unseen data.
-%    The first method for universal adversarial attack was based on accumulating perturbations iteratively by composing perturbations for each data point~\cite{moosavidezfooli2017universal}.
-%    Other studies have used singular vectors~\cite{khrulkov2017art} and networks for adversary generation (NAGs)~\cite{mopuri2018nag}.
-%    \item White box Vs. Black box - In white box attacks, the architecture, weights, and parameters of the model are known to the adversary.
-%    First, white box adversarial attacks were derived through the generation of artificial perturbations using gradient-based optimization~\cite{szegedy2014intriguing}.
-%    There have been numerous works since then that have demonstrated different approaches to generating white-box adversarial attacks, such as FGSM\cite{ref7}, JSMA~\cite{papernot2015limitations}, and Deepfool~\cite{moosavidezfooli2016deepfool}.
-%    Attackers using black box methods assume they can only query the model without any further knowledge of it.
-%    Several studies have shown that a black-box approach can lead to generating successful attacks~\cite{BlackBox1, BlackBox2, BlackBox3, BlackBox4}.
-%\end{itemize}
-%
-%Additionally, we investigate $L_0$ attacks, which aim to modify a small number of pixels.
-%In previous studies, it has been demonstrated that even a single pixel perturbation can lead to successful attacks\cite{OnePixelAttack, alatalo2021chromatic, vargas2019understanding}.
-%
-%\subsection{Program synthesis}
+Our thesis topics mainly involve Neural-Networks Verifiers, Adversarial Attacks in Multi-Label Classification and Counter Example Guided Synthesis.
+We next review some related work.
+\subsection{Neural-Networks Verifiers}
+Neural network verifiers are tools or methods that are used to ensure the robustness of neural networks.
+These verifiers use mathematical techniques such as constraint solving and model checking to analyze the behavior of neural networks and ensure that they operate correctly under certain kinds of adversarial attacks.
+There are various neural network verification techniques, such as abstract interpretation (e.g.~\cite{ABSTRACTINTER, INCOMPLETE1}), linear programming (e.g.~\cite{MIPVERIFY}) and more.
+Verifiers are usually divided into two categories:
+\begin{itemize}
+    \item Incomplete Verifiers - an incomplete verifier may only be able to prove the absence of adversarial examples for a subset of the inputs (not all of them)~\cite{INCOMPLETE1, INCOMPLETE2}.
+    \item Complete Verifiers - a complete verifier can prove the absence of adversarial examples for all inputs~\cite{MIPVERIFY, COMPLETE}, but is likely more time expensive than other incomplete verifiers.
+\end{itemize}
+In our preliminary work we used $MIPVerify$, a MILP (Mixed Integer Linear Programming) verifier~\cite{MIPVERIFY} which is a complete verifier.
+
+\subsection{Adversarial Attacks in Multi-Label Classification}
+Adversarial attacks in multi-label classification refer to the phenomenon where an adversary intentionally modifies the input data to a multi-label classifier in order to cause misclassification or mislabeling of the input.
+In multi-label classification, each input can be assigned multiple labels, and the classifier is trained to predict a subset of these labels for each input.
+Adversarial attacks in this context can take various forms, such as adding perturbations to the input data to cause the classifier to predict any different incorrect subset of labels, or to cause the classifier to not predict a specific correct label.
+We focus on the latter.
+Most existing works on adversarial examples have been focused on the case of multi-class single-label classification~\cite{SINGLElABEL1, SINGLElABEL2, SINGLElABEL3, SINGLElABEL4}, but few on the case of multi-label classification~\cite{MULTIlABEL}.
+
+\subsection{Counter Example Guided Synthesis}
+Counter example guided synthesis (CEGIS) is a technique used in formal verification and program synthesis to generate correct programs or system designs from specific given specifications.
+The basic idea behind CEGIS is to iteratively search for a candidate that satisfies the specification, while using counterexamples to refine the search space and guide the synthesis process.
+In this thesis we use CEGIS to find the desired epsilons sequence that will define a robust maximal layer-neighborhood;
+Our specification - a maximal robust layer-neighborhood, the counterexamples - adversarial examples and weakest points.
+We submit several queries to a verifier in each iteration and update the epsilons sequence accordingly, given the counterexamples.
+Previous work also used CEGIS to find maximal robust neighborhoods~\cite{MARVEL}, we use similar approach as this work.
+
 %Program synthesis is the task of automatically generating a computer program from user requirements.
 %It has been studied for decades and shown success in a variety of fields,
 %such as data wrangling\cite{inbook}, code repair\cite{d39antoni2016qlose}, code suggestions\cite{10.1145/2594291.2594321}, probabilistic modeling\cite{nori2015efficient} and superoptimization\cite{10.1145/36206.36194}.
