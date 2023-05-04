@@ -18,7 +18,7 @@ We ran our algorithm on three different CNN multi-label DOUBLE-MNIST classifiers
       \item With an $L_0$ defense: this defense relies on the following data augmentation.
     Before forwarding a training sample to the network, we add random noise to the image in the form of a black rectangle.
         \item With an $L_{\infty}$ defense: using the Projected Gradient Descent (PGD) defense~\cite{PGD}.
-    This defense also involves training the model with adversarial examples, but unlike the $L_0$ defense, the added perturbations ave a small value and can be anywhere in the input.
+    This defense also involves training the model with adversarial examples, but unlike the $L_0$ defense, the added perturbations are a small value and can be anywhere in the input.
     %The PGD generated adversarial examples are achieved by trying to increase the model's loss function as much as possible.
     %Therefore, training the model with such adversarial examples should make the network more robust.
 \end{itemize} 

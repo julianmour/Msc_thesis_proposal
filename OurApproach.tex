@@ -35,7 +35,8 @@ In particular, the verifier only has to prove that one of the labels is the targ
     \paragraph{The CEGIS component}
     The CEGIS components takes a non-robust neighborhood and the previously robust neighborhood  attempts to identify directions of the previously robust neighborhood that cannot be further expanded. %If the neighborhood checked by the verifier isn't robust, then we skip the optimization part.
     %Instead, we try to minimally shrink the neighborhood so that its robust.
-    Computing the exact directions requires an exponential number of queries to the verifier. Instead, we consider two approaches:
+    Computing the exact directions requires an exponential number of queries to the verifier.
+    Instead, we consider two approaches:
     \begin{itemize}
         \item Fixed weights - We shrink the neighborhood using fixed weights, where we aim to shrink the neighborhood more in layers that are far from the non-target object and less in layers that are close to it.\Dana{not clear, can you define it mathematically?}
         \item Sensitivity weights - Similar to the fixed weights approach, but we aim to shrink more in layers that are less sensitive to perturbations.
