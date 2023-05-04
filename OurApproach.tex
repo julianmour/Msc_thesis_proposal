@@ -3,34 +3,45 @@
 
 \section{Our Approach}
 
-In this thesis, we will build a program that given a multi-label classifier and an image, can find a layer-neighborhood of the image around a certain object (non-target class) that is robust for another object (target class) in the image.
-A straight-forward solution would be to calculate each epsilon individually using a verifier and binary search.
-Problem is this approach is very expensive in time hence inefficient.
-Our approach aims to reach similar results as the straight-forward one, but in much less time.
-In principle, our approach is similar to MaRVeL's~\cite{MARVEL}.
-The desired program will have two main components:
-
+In this thesis, we will design an algorithm that given a multi-label classifier and an image computes the maximal neighborhood given by an epsilon sequence, describing how perturbation of the non-target object affects the classification of the target object.
+A naive algorithm computes the epsilon series one by one, where at each iteration it computes the maximal epsilon using a binary search.
+However, this approach is suitable in case the weight vector poses a strict ordering on the importance of the layers, and it also has a high time overhead.
+%Problem is this approach is very expensive in time hence inefficient.
+Instead, we aim to build on the oracle-guided numerical verification proposed in~\cite{MARVEL}, to obtain a scalable algorithm.
+Technically, our algorithm has three main components, that iteratively interact with one another:
 \begin{itemize}
-    \item The Verifier - The verifier's main job is to check whether a given layer-neighborhood $N(x)$ of an image is robust for the classifier and pass the result to the optimizer.
-    Since this is a multi-label classifier, we are interested only in the target class robustness;
-    The verifier will say that the neighborhood is robust if and only if all images in the neighborhood are classified to the target class.
-    The verifier in our case is a MILP based on the MIPVerify program~\cite{MIPVERIFY} that translates the robustness problem of a multi-label Neural-Network to a MILP maximization problem and uses the Gurobi Optimizer to solve it.
-    In addition to checking whether the neighborhood is robust or not, the verifier returns the weakest points of the image.
-    These are the points in the checked neighborhood that are least robust and the verifier will pass them to the optimizer as well.
-    \item The Optimizer - The optimizer's job is to update a given robust layer-neighborhood by expanding it more, as we intend to maximize the norm of the neighborhood.
-    In practice, we try to maximize the norm of the neighborhood and the Robustness Level (RL) of the classifier as well.
-    This is done by computing the gradients of both components;
-    The norm's gradient is computed in a straightforward way while the RL's gradient is computed using the weakest points found by the verifier.
-    At last, we calculate the step gradient, which is a combination of both previous gradients, and expand the neighborhood towards the step gradient.
-    If the neighborhood checked by the verifier isn't robust, then we skip the optimization part.
-    Instead, we try to minimally shrink the neighborhood so that its robust.
-    We do that in two different approaches:
-    \begin{itemize}
-        \item Fixed weights - We shrink the neighborhood using fixed weights, where we aim to shrink the neighborhood more in layers that are far from the non-target object and less in layers that are close to it.
-        \item Sensitivity weights - Similar to the fixed weights approach, but we aim to shrink more in layers that are less sensitive to perturbations.
-        We get the sensitivity weights of an image by using the Vanilla Gradient method, introduced by Simonyan et al.~\cite{VANILLAGRADIENT}.
+    \item A local robustness verifier: Given a classifier and a layer-neighborhood $N(x)$ of an image $x$, it determines whether the classifier is robust in this neighborhood. 
+        \item A numerical optimizer: Given classifier and a robust layer-neighborhood, it attempts to expand the neighborhood into a larger robust neighborhood, with respect to the weight vector. %by expanding it more, as we intend to maximize the norm of the neighborhood.
+    \item A counterexample-guided inductive synthesiser (CEGIS): Given classifier and a \emph{non-robust} layer-neighborhood, it attempts to identify directions of the previously robust neighborhood that cannot be further expanded. 
     \end{itemize}
-    The new layer-neighborhood will be the input of the verifier in the next iteration.
-\end{itemize}
-Like that, we do this in iterations many times until convergence of the layer-neighborhood and the RL\@.
-We aim to reach a maximal robust layer-neighborhood at the end of the process.
+The components interact until the neighborhood cannot be further expanded.
+We next provide details about the different components and explain the open challenges.
+\paragraph{The verifier}
+There are many verifiers that can reason about the local robustness of a (single-label) classifier. However, none addresses a multi-label classifier. Thus, part of the challenge is adapting a verifier to multi-label classification. 
+In particular, the verifier only has to prove that one of the labels is the target object's label. %Since this is a multi-label classifier, we are interested only in the target class robustness;
+    %The verifier will say that the neighborhood is robust if and only if all images in the neighborhood are classified to the target class.
+    In our preliminary research, we rely on the mixed-integer linear program (MILP) based verifier, called MIPVerify~\cite{MIPVERIFY}. This verifier encodes the robustness task into a MILP maximization problem and uses the Gurobi Optimizer to solve it.
+    Beyond determining whether a neighborhood is robust or not, the verifier returns a set of points minimizing the objective, to which we call \emph{the weakest points of the image}. These points later help the optimizer to identify robust directions to expand the current neighborhood.
+    %These are the points in the checked neighborhood that are least robust and the verifier will pass them to the optimizer as well.
+    
+    \paragraph{The optimizer}
+    Our optimizer expands a robust neighborhood by computing the gradient of the optimization problem defined in the previous section.
+    Since it is a constrained optimization, we relax the constraint and add an equivalent term to the optimization goal, as standard. We call this term \emph{the robustness level} (RL).
+    To expand a robust neighborhood, our optimizer 
+    computes the gradients of both terms.
+    The norm's gradient is computed in a straightforward way while the RL's gradient is computed using the weakest points found by the verifier.
+    Given the gradients, the optimizer expands the neighborhood by a small step and submits to the verifier. %At last, we calculate the step gradient, which is a combination of both previous gradients, and expand the neighborhood towards the step gradient.
+    
+    \paragraph{The CEGIS component}
+    The CEGIS components takes a non-robust neighborhood and the previously robust neighborhood  attempts to identify directions of the previously robust neighborhood that cannot be further expanded. %If the neighborhood checked by the verifier isn't robust, then we skip the optimization part.
+    %Instead, we try to minimally shrink the neighborhood so that its robust.
+    Computing the exact directions requires an exponential number of queries to the verifier. Instead, we consider two approaches:
+    \begin{itemize}
+        \item Fixed weights - We shrink the neighborhood using fixed weights, where we aim to shrink the neighborhood more in layers that are far from the non-target object and less in layers that are close to it.\Dana{not clear, can you define it mathematically?}
+        \item Sensitivity weights - Similar to the fixed weights approach, but we aim to shrink more in layers that are less sensitive to perturbations.
+        We get the sensitivity weights of an image by using the Vanilla Gradient method, introduced by Simonyan et al.~\cite{VANILLAGRADIENT}.\Dana{same comment, this part is important because it's the novel part}
+    \end{itemize}
+    Then, the optimizer is given \Dana{complete}. %The new layer-neighborhood will be the input of the verifier in the next iteration.
+
+%Like that, we do this in iterations many times until convergence of the layer-neighborhood and the RL\@.
+%We aim to reach a maximal robust layer-neighborhood at the end of the process.
