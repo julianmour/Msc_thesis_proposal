@@ -20,7 +20,20 @@ Adversarial attacks in multi-label classification refer to the phenomenon where 
 In multi-label classification, each input can be assigned multiple labels, and the classifier is trained to predict a subset of these labels for each input.
 Adversarial attacks in this context can take various forms, such as adding perturbations to the input data to cause the classifier to predict any different incorrect subset of labels, or to cause the classifier to not predict a specific correct label.
 We focus on the latter.
-Most existing works on adversarial examples have been focused on the case of multi-class single-label classification~\cite{SINGLElABEL1, SINGLElABEL2, SINGLElABEL3, SINGLElABEL4}, but few on the case of multi-label classification~\cite{MULTIlABEL}.
+Most existing works on adversarial attacks have been focused on the case of multi-class single-label classification~\cite{SINGLElABEL1, SINGLElABEL2, SINGLElABEL3, SINGLElABEL4}.
+Several others on the case of multi-label classification, where attacks are mainly divided to two types: \textbf{(1)~Targeted Attacks} - aim to bring specific incorrect labels' scores to be the highest and \textbf{(2)~Untargeted Attacks} - aim to bring the correct labels' scores to not be the highest.
+Our property focuses on giving a robust neighborhood against a type of untargeted attacks;
+Such attacks that aim to bring a specific correct label's score to not be in the top picked labels.
+Related work:
+\begin{itemize}
+    \item Song et al.~\cite{MULTIlABEL1} Introduced targeted white-box attacks for multi-label classification.
+    They approached the problem by formulating it as an optimization problem and using gradient descent to solve it.
+    Through experimentation, they discovered that they could manipulate a multi-label classifier into producing any set of labels for a given input by adding an adversarial perturbation.
+    \item Zhou et al.~\cite{MULTIlABEL2} Suggested generating $L_{\infty}$-norm adversarial perturbations to trick multi-label classifiers.
+    They solved the problem by transforming the optimization problem of finding adversarial perturbations into a linear programming problem, which can be solved efficiently.
+    \item Another study by Yang et al.~\cite{MULTIlABEL3} Explored the potential for misclassification risk in multi-label classifiers, particularly in worst-case scenarios.
+    They approached the problem by formulating it as a bi-level set function optimization problem, and used random greedy search to find an approximate solution.
+\end{itemize}
 
 \subsection{Counter Example Guided Synthesis}
 Counter example guided synthesis (CEGIS) is a technique used in formal verification and program synthesis to generate correct programs or system designs from specific given specifications.
@@ -28,4 +41,4 @@ The basic idea behind CEGIS is to iteratively search for a candidate that satisf
 In this thesis we use CEGIS to find the desired epsilons sequence that will define a robust maximal layer-neighborhood;
 Our specification - a maximal robust layer-neighborhood, the counterexamples - adversarial examples and weakest points.
 We submit several queries to a verifier in each iteration and update the epsilons sequence accordingly, given the counterexamples.
-Previous work also used CEGIS to find maximal robust neighborhoods~\cite{MARVEL}, we use similar approach as this work.
+Previous work also used CEGIS to find maximal robust neighborhoods~\cite{CEGIS1, MARVEL, CEGIS2, CEGIS3}, we use similar approach as MaRVeL's~\cite{MARVEL}.

@@ -67,8 +67,6 @@ Name 1 in "Ian J Goodfellow, Jonathon Shlens, and Christian Szegedy" has a comma
 while executing---line 1049 of file plain.bst
 Name 1 in "Seyed-Mohsen Moosavi-Dezfooli, Alhussein Fawzi, and Pascal Frossard" has a comma at the end for entry SINGLElABEL4
 while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "Shu Hu, Lipeng Ke, Xin Wang, Siwei Lyu" for entry MULTIlABEL
-while executing---line 1049 of file plain.bst
 Too many commas in name 1 of "Aleksander Madry, Aleksandar Makelov, Ludwig Schmidt, Dimitris Tsipras, Adrian Vladu" for entry PGD
 while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Aleksander Madry, Aleksandar Makelov, Ludwig Schmidt, Dimitris Tsipras, Adrian Vladu" for entry PGD
@@ -117,8 +115,6 @@ Too many commas in name 1 of "Papageorgiou, C., Poggio, T" for entry ObjectDetec
 while executing---line 1090 of file plain.bst
 Name 1 in "Seyed-Mohsen Moosavi-Dezfooli, Alhussein Fawzi, and Pascal Frossard" has a comma at the end for entry SINGLElABEL4
 while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "Shu Hu, Lipeng Ke, Xin Wang, Siwei Lyu" for entry MULTIlABEL
-while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Sijie Ji, Kai Wang, Xiaojiang Peng, Jianfei Yang, Zhaoyang Zeng, Yu Qiao" for entry FacialRec
 while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Sijie Ji, Kai Wang, Xiaojiang Peng, Jianfei Yang, Zhaoyang Zeng, Yu Qiao" for entry FacialRec
@@ -133,45 +129,45 @@ Too many commas in name 1 of "Stefano Melacci, Gabriele Ciravegna, Angelo Sotgiu
 while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Stefano Melacci, Gabriele Ciravegna, Angelo Sotgiu, Ambra Demontis, Battista Biggio, Marco Gori" for entry MultiVul3
 while executing---line 1090 of file plain.bst
-You've used 28 entries,
+You've used 33 entries,
             2118 wiz_defined-function locations,
-            633 strings with 8303 characters,
-and the built_in function-call counts, 6516 in all, are:
-= -- 608
-> -- 328
-< -- 0
-+ -- 134
-- -- 104
-* -- 321
-:= -- 1219
-add.period$ -- 80
-call.type$ -- 28
-change.case$ -- 136
+            674 strings with 9542 characters,
+and the built_in function-call counts, 9026 in all, are:
+= -- 849
+> -- 469
+< -- 4
++ -- 187
+- -- 152
+* -- 522
+:= -- 1612
+add.period$ -- 97
+call.type$ -- 33
+change.case$ -- 173
 chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 268
-empty$ -- 497
-format.name$ -- 104
-if$ -- 1301
+cite$ -- 33
+duplicate$ -- 358
+empty$ -- 678
+format.name$ -- 152
+if$ -- 1843
 int.to.chr$ -- 0
-int.to.str$ -- 28
-missing$ -- 24
-newline$ -- 139
-num.names$ -- 56
-pop$ -- 156
+int.to.str$ -- 33
+missing$ -- 29
+newline$ -- 164
+num.names$ -- 70
+pop$ -- 195
 preamble$ -- 1
-purify$ -- 108
+purify$ -- 140
 quote$ -- 0
-skip$ -- 206
+skip$ -- 277
 stack$ -- 0
-substring$ -- 142
-swap$ -- 28
-text.length$ -- 0
+substring$ -- 311
+swap$ -- 62
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 112
+type$ -- 132
 warning$ -- 0
-while$ -- 56
-width$ -- 30
-write$ -- 274
-(There were 64 error messages)
+while$ -- 78
+width$ -- 35
+write$ -- 333
+(There were 62 error messages)

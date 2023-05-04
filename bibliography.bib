@@ -560,12 +560,35 @@ journal={Proceedings of the IEEE conference on computer vision and pattern recog
 year={2016}
 }
 
-@article{MULTIlABEL,
-title={TkML-AP: Adversarial Attacks to Top-k Multi-Label Learning},
-author = {Shu Hu, Lipeng Ke, Xin Wang, Siwei Lyu},
-journal={ICCV},
-year={2021}
+@article{MULTIlABEL1,
+title={Multi-label Adversarial Perturbations},
+author={Qingquan Song; Haifeng Jin; Xiao Huang; Xia Hu},
+year={2018},
+journal={IEEE}
 }
+
+@INPROCEEDINGS{MULTIlABEL2,
+  author={Zhou, Nan and Luo, Wenjian and Lin, Xin and Xu, Peilan and Zhang, Zhenya},
+  booktitle={2020 International Joint Conference on Neural Networks (IJCNN)},
+  title={Generating Multi-label Adversarial Examples by Linear Programming},
+  year={2020},
+  volume={},
+  number={},
+  pages={1-8},
+  doi={10.1109/IJCNN48605.2020.9206614}}
+
+@article{MULTIlABEL3,
+    title={Characterizing the Evasion Attackability of Multi-label Classifiers},
+    volume={35},
+    url={https://ojs.aaai.org/index.php/AAAI/article/view/17273},
+    DOI={10.1609/aaai.v35i12.17273},
+    abstractNote={Evasion attack in multi-label learning systems is an interesting, widely witnessed, yet rarely explored research topic. Characterizing the crucial factors determining the attackability of the multi-label adversarial threat is the key to interpret the origin of the adversarial vulnerability and to understand how to mitigate it. Our study is inspired by the theory of adversarial risk bound. We associate the attackability of a targeted multi-label classifier with the regularity of the classifier and the training data distribution. Beyond the theoretical attackability analysis, we further propose an efficient empirical attackability estimator via greedy label space exploration. It provides provably computational efficiency and approximation accuracy. Substantial experimental results on real-world datasets validate the unveiled attackability factors and the effectiveness of the proposed empirical attackability indicator.},
+    number={12},
+    journal={Proceedings of the AAAI Conference on Artificial Intelligence},
+    author={Yang, Zhuo and Han, Yufei and Zhang, Xiangliang},
+    year={2021},
+    month={May},
+    pages={10647-10655} }
 
 @article{IMAGETAGGING,
 title={Fast Image Tagging},
@@ -630,3 +653,48 @@ author={Sukrut Rao, David Stutz, Bernt Schiele},
     year={2020},
 journal={ECCV}
 }
+
+@ARTICLE{CEGIS1,
+  author={Li, Changjiang and Ji, Shouling and Weng, Haiqin and Li, Bo and Shi, Jie and Beyah, Raheem and Guo, Shanqing and Wang, Zonghui and Wang, Ting},
+  journal={IEEE Transactions on Dependable and Secure Computing},
+  title={Towards Certifying the Asymmetric Robustness for Neural Networks: Quantification and Applications},
+  year={2022},
+  volume={19},
+  number={6},
+  pages={3987-4001},
+  doi={10.1109/TDSC.2021.3116105}}
+
+@InProceedings{CEGIS2,
+author="Kabaha, Anan
+and Drachsler-Cohen, Dana",
+editor="Singh, Gagandeep
+and Urban, Caterina",
+title="Boosting Robustness Verification of Semantic Feature Neighborhoods",
+booktitle="Static Analysis",
+year="2022",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="299--324",
+abstract="Deep neural networks have been shown to be vulnerable to adversarial attacks that perturb inputs based on semantic features. Existing robustness analyzers can reason about semantic feature neighborhoods to increase the networks' reliability. However, despite the significant progress in these techniques, they still struggle to scale to deep networks and large neighborhoods. In this work, we introduce VeeP, an active learning approach that splits the verification process into a series of smaller verification steps, each is submitted to an existing robustness analyzer. The key idea is to build on prior steps to predict the next optimal step. The optimal step is predicted by estimating the robustness analyzer's velocity and sensitivity via parametric regression. We evaluate VeeP on MNIST, Fashion-MNIST, CIFAR-10 and ImageNet and show that it can analyze neighborhoods of various features: brightness, contrast, hue, saturation, and lightness. We show that, on average, given a 90 minute timeout, VeeP verifies 96{\%} of the maximally certifiable neighborhoods within 29 minutes, while existing splitting approaches verify, on average, 73{\%} of the maximally certifiable neighborhoods within 58 minutes.",
+isbn="978-3-031-22308-2"
+}
+
+
+@InProceedings{CEGIS3,
+  title = 	 {On Certifying Non-Uniform Bounds against Adversarial Attacks},
+  author =       {Liu, Chen and Tomioka, Ryota and Cevher, Volkan},
+  booktitle = 	 {Proceedings of the 36th International Conference on Machine Learning},
+  pages = 	 {4072--4081},
+  year = 	 {2019},
+  editor = 	 {Chaudhuri, Kamalika and Salakhutdinov, Ruslan},
+  volume = 	 {97},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {09--15 Jun},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v97/liu19h/liu19h.pdf},
+  url = 	 {https://proceedings.mlr.press/v97/liu19h.html},
+  abstract = 	 {This work studies the robustness certification problem of neural network models, which aims to find certified adversary-free regions as large as possible around data points. In contrast to the existing approaches that seek regions bounded uniformly along all input features, we consider non-uniform bounds and use it to study the decision boundary of neural network models. We formulate our target as an optimization problem with nonlinear constraints. Then, a framework applicable for general feedforward neural networks is proposed to bound the output logits so that the relaxed problem can be solved by the augmented Lagrangian method. Our experiments show the non-uniform bounds have larger volumes than uniform ones. Compared with normal models, the robust models have even larger non-uniform bounds and better interpretability. Further, the geometric similarity of the non-uniform bounds gives a quantitative, data-agnostic metric of input features’ robustness.}
+}
+
+
+

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.2)  1 MAY 2023 19:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.2)  4 MAY 2023 17:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -521,28 +521,28 @@ Package pdftex.def Info: l0_defense_sensitivity_weights.png  used on input line
  [3] [4 <./3.png (PNG copy)> <./no_defense_fixed_weights.png> <./no_defense_sen
 sitivity_weights.png>]) (FutureRO.tex)
 (RelatedWork.tex [5 <./l0_defense_fixed_weights.png> <./l0_defense_sensitivity_
-weights.png>])
+weights.png>]) [6]
 (C:/Users\julianmour\OneDrive - Technion\Documents\Research\Proposal\auxil\main
-.bbl [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 118--123
-[]\OT1/cmr/m/n/10.95 Angelo Sotgiu-Ambra De-mon-tis Bat-tista Big-gio Marco Gor
-i Ste-fano Melacci,
+.bbl [7]
+Underfull \hbox (badness 6461) in paragraph at lines 140--145
+[]\OT1/cmr/m/n/10.95 Angelo Sot-giu Am-bra De-mon-tis Bat-tista Big-gio Marco G
+ori Ste-fano Melacci,
  []
 
-) [8]
+[8]) [9]
 (C:/Users\julianmour\OneDrive - Technion\Documents\Research\Proposal\auxil\main
 .aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 8580630ED522492ACBF01D570C70B406;1496.
  ) 
 Here is how much of TeX's memory you used:
- 11910 strings out of 478351
- 195115 string characters out of 2834693
- 508252 words of memory out of 3000000
- 30108 multiletter control sequences out of 15000+600000
+ 11931 strings out of 478351
+ 195430 string characters out of 2834693
+ 509332 words of memory out of 3000000
+ 30123 multiletter control sequences out of 15000+600000
  476015 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,10n,77p,360b,646s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,10n,77p,367b,686s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\julianmour\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600
 \tcrm1095.pk><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/amsfonts/cm/cmbx10.pfb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/f
@@ -559,9 +559,9 @@ ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ju
 lianmour/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pf
 b>
 Output written on "C:/Users\julianmour\OneDrive - Technion\Documents\Research\P
-roposal\out\main.pdf" (8 pages, 318964 bytes).
+roposal\out\main.pdf" (9 pages, 326478 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 56 named destinations out of 1000 (max. 500000)
+ 256 PDF objects out of 1000 (max. 8388607)
+ 62 named destinations out of 1000 (max. 500000)
  98 words of extra memory for PDF output out of 10000 (max. 10000000)
 

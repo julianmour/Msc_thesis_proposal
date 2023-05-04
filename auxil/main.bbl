@@ -7,7 +7,7 @@ Naveed Akhtar and Ajmal Mian.
 \newblock {\em IEEE}, 2018.
 
 \bibitem{PGD}
-Ludwig Schmidt-Dimitris Tsipras Adrian~Vladu Aleksander~Madry,
+Ludwig Schmidt Dimitris Tsipras Adrian~Vladu Aleksander~Madry,
   Aleksandar~Makelov.
 \newblock Towards deep learning models resistant to adversarial attacks.
 \newblock {\em ICLR}, 2018.
@@ -18,12 +18,12 @@ Nicholas Carlini and David Wagner.
 \newblock {\em IEEE}, 2017.
 
 \bibitem{ABSTRACTINTER}
-Markus Püschel-Martin~Vechev Gagandeep~Singh, Timon~Gehr.
+Markus Püschel Martin~Vechev Gagandeep~Singh, Timon~Gehr.
 \newblock An abstract domain for certifying neural networks.
 \newblock {\em ACM}, 2019.
 
 \bibitem{INCOMPLETE2}
-Matthew Mirman-Markus Püschel Martin~Vechev Gagandeep~Singh, Timon~Gehr.
+Matthew Mirman Markus Püschel Martin~Vechev Gagandeep~Singh, Timon~Gehr.
 \newblock Fast and effective robustness certification.
 \newblock {\em NeurIPS}, 2018.
 
@@ -32,18 +32,23 @@ Ian~J. Goodfellow, Jonathon Shlens, and Christian Szegedy.
 \newblock Explaining and harnessing adversarial examples.
 \newblock {\em In ICLR}, 2015.
 
+\bibitem{MULTIlABEL1}
+Qingquan Song; Haifeng Jin; Xiao Huang;~Xia Hu.
+\newblock Multi-label adversarial perturbations.
+\newblock {\em IEEE}, 2018.
+
 \bibitem{SINGLElABEL3}
 Jonathon~Shlens Ian J~Goodfellow and Christian Szegedy.
 \newblock Explaining and harnessing adversarial examples.
 \newblock {\em International Conference on Learning Representations}, 2015.
 
 \bibitem{OracleGuided}
-Gulwani S. Seshia S.A.-Tiwari~A. Jha, S.
+Gulwani S. Seshia S.A. Tiwari~A. Jha, S.
 \newblock Oracle-guided component-based program synthesis.
 \newblock {\em ICSE}, 2010.
 
 \bibitem{DoubleMNIST}
-Gulwani S. Seshia S.A.-Tiwari A.Sara Sabour Nicholas Frosst Geoffrey E.~Hinton
+Gulwani S. Seshia S.A. Tiwari A.Sara Sabour Nicholas Frosst Geoffrey E.~Hinton
   Jha, S.
 \newblock Dynamic routing between capsules.
 \newblock {\em NeurIPS}, 2017.
@@ -60,8 +65,14 @@ Anan Kabaha and Dana~Drachsler Cohen.
   numerical optimization.
 \newblock {\em VMCAI}, 2023.
 
+\bibitem{CEGIS2}
+Anan Kabaha and Dana Drachsler-Cohen.
+\newblock Boosting robustness verification of semantic feature neighborhoods.
+\newblock In Gagandeep Singh and Caterina Urban, editors, {\em Static
+  Analysis}, pages 299--324, Cham, 2022. Springer Nature Switzerland.
+
 \bibitem{COMPLETE}
-Shiqi Wang-Yihan Wang Suman Jana Xue Lin Cho-Jui~Hsieh Kaidi~Xu, Huan~Zhang.
+Shiqi Wang Yihan Wang Suman Jana Xue Lin Cho-Jui~Hsieh Kaidi~Xu, Huan~Zhang.
 \newblock Fast and complete: Enabling complete neural network verification with
   rapid and massively parallel incomplete verifiers, 11 2020.
 
@@ -69,6 +80,22 @@ Shiqi Wang-Yihan Wang Suman Jana Xue Lin Cho-Jui~Hsieh Kaidi~Xu, Huan~Zhang.
 Alexey Kurakin, Ian~J. Goodfellow, and Samy Bengio.
 \newblock Adversarial examples in the physical world.
 \newblock {\em In ICLR}, 2017.
+
+\bibitem{CEGIS1}
+Changjiang Li, Shouling Ji, Haiqin Weng, Bo~Li, Jie Shi, Raheem Beyah, Shanqing
+  Guo, Zonghui Wang, and Ting Wang.
+\newblock Towards certifying the asymmetric robustness for neural networks:
+  Quantification and applications.
+\newblock {\em IEEE Transactions on Dependable and Secure Computing},
+  19(6):3987--4001, 2022.
+
+\bibitem{CEGIS3}
+Chen Liu, Ryota Tomioka, and Volkan Cevher.
+\newblock On certifying non-uniform bounds against adversarial attacks.
+\newblock In Kamalika Chaudhuri and Ruslan Salakhutdinov, editors, {\em
+  Proceedings of the 36th International Conference on Machine Learning},
+  volume~97 of {\em Proceedings of Machine Learning Research}, pages
+  4072--4081. PMLR, 09--15 Jun 2019.
 
 \bibitem{ref56}
 Aleksander Madry, Aleksandar Makelov, Ludwig Schmidt, Dimitris Tsipras, and
@@ -97,13 +124,8 @@ Alhussein~Fawzi Seyed-Mohsen Moosavi-Dezfooli and Pascal Frossard.
 \newblock {\em Proceedings of the IEEE conference on computer vision and
   pattern recognition}, 2016.
 
-\bibitem{MULTIlABEL}
-Xin Wang-Siwei~Lyu Shu~Hu, Lipeng~Ke.
-\newblock Tkml-ap: Adversarial attacks to top-k multi-label learning.
-\newblock {\em ICCV}, 2021.
-
 \bibitem{FacialRec}
-Xiaojiang Peng-Jianfei Yang Zhaoyang Zeng Yu~Qiao Sijie~Ji, Kai~Wang.
+Xiaojiang Peng Jianfei Yang Zhaoyang Zeng Yu~Qiao Sijie~Ji, Kai~Wang.
 \newblock Multiple transfer learning and multi-label balanced training
   strategies for facial au detection in the wild.
 \newblock {\em Proceedings of the IEEE/CVF Conference on Computer Vision and
@@ -115,7 +137,7 @@ Andrea~Vedaldi Simonyan, Karen and Andrew Zisserman.
   models and saliency maps., 2013.
 
 \bibitem{MultiVul3}
-Angelo Sotgiu-Ambra Demontis Battista Biggio Marco~Gori Stefano~Melacci,
+Angelo Sotgiu Ambra Demontis Battista Biggio Marco~Gori Stefano~Melacci,
   Gabriele~Ciravegna.
 \newblock Domain knowledge alleviates adversarial attacks in multi-label
   classifiers.
@@ -149,9 +171,21 @@ Russ~Tedrake Vincent~Tjeng, Kai~Xiao.
   programming.
 \newblock {\em ICLR}, 2019.
 
+\bibitem{MULTIlABEL3}
+Zhuo Yang, Yufei Han, and Xiangliang Zhang.
+\newblock Characterizing the evasion attackability of multi-label classifiers.
+\newblock {\em Proceedings of the AAAI Conference on Artificial Intelligence},
+  35(12):10647--10655, May 2021.
+
 \bibitem{ref29}
 Xiaoyong Yuan, Pan He, Qile Zhu, and Xiaolin Li.
 \newblock Adversarial examples: Attacks and defenses for deep learning.
 \newblock {\em In {IEEE} Trans. Neural Networks Learn. Syst}, 2019.
+
+\bibitem{MULTIlABEL2}
+Nan Zhou, Wenjian Luo, Xin Lin, Peilan Xu, and Zhenya Zhang.
+\newblock Generating multi-label adversarial examples by linear programming.
+\newblock In {\em 2020 International Joint Conference on Neural Networks
+  (IJCNN)}, pages 1--8, 2020.
 
 \end{thebibliography}

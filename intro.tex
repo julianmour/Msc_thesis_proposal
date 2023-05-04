@@ -30,10 +30,12 @@ Even given a suitable definition, verifying multi-label classifiers is challengi
 
 \paragraph{Multi-label classifier robustness}
 In this thesis, we propose a new definition for local robustness of multi-label classifiers.
-At high level, given a multi-label classifier, an input containing several objects and a perturbation limit (that depends on the perturbation's distance from a non-target object), the network is robust if perturbing the given input up to the given limit does not change the network's target object classification.
+At high level, given a multi-label classifier, an input containing several objects and a perturbation limit (that depends on the perturbation's distance from non-target object or objects), the network is robust if perturbing the given input up to the given limit does not change the network's target object or objects classification.
 %\Dana{complete as in the previous sentence}.
-This definition allows one to understand how changing a specific object in a multi-labeled image affects another's classification in a multi-label classifiers, and define a relation between these two objects regarding the vulnerability of one to another.
+This definition allows one to understand how changing specific objects in a multi-labeled image affects other objects' classifications in multi-label classifiers, and define a relation between several objects regarding the vulnerability of one to another.
 %\Dana{complete the motivation to this definition}.
+For simplicity, we will focus on one untarget object and one target object;
+A relation between two objects in an image.
  %want to explore the robustness of different multi-label classifiers in one class - the target class, while adding perturbation around another - the non-target class.
 
 \paragraph{Problem definition} Given an image and a multi-label classifier, our goal is to compute a maximal robust layer-neighborhood - a sequence of robust epsilons representing a robust perturbation per each layer surrounding the non-target object.
