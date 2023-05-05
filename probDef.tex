@@ -3,12 +3,21 @@
 
 \section{Problem Definition}
 In this section, we define the problem we address.
-In general, we can discuss the problem with several target and non-target objects, but for simplicity we will focus on one object from each type.
-Informally, we are interested in developing an efficient algorithm that given a single image, it returns a robust layer-neighborhood for a target object (target class);
-A robust sequence of epsilons each representing the perturbation per layer.
-Each layer is defined to be a set of pixels that share the same distance from a specific non-target object (non-target class) in the image.
-
-Formally, Given a classifier $F$, an image $x$ of size $n\times m$ containing two objects: $c_{target}$ and $c_{non-target}$ \textrm{s.t.} $F(x)$ = \{$c_{target}$, $c_{non-target}$\},
+For simplicity's sake, all our definitions and algorithms focus on images with two objects -- the target one and the perturbed one -- but they can extend to multiple objects.
+%In general, we can discuss the problem with several target and non-target objects, but for simplicity we will focus on one object from each type.
+Informally, given a multi-label classifier, an image showing a target object, we aim to compute 
+a robust layer-neighborhood, given for a target object (target class). The neighborhood is defined by
+a sequence of epsilons representing the perturbation per layer.
+%Each layer is defined to be a set of pixels that share the same distance from a specific non-target object (non-target class) in the image.
+We begin with definitions and then define our problem.
+A multi-classifier is a function mapping \Dana{complete} $F:\rightarrow$ \Dana{complete}.
+Given an image, the classification of $F$ is \Dana{complete}.
+A neighborhood of input $x$ is a set of inputs containing $x$. A neighborhood $I$ is robust if \Dana{complette with words and with mathematical notation}. We focus on layered neighborhoods. 
+To define it, we denote the set of pixels showing an object in an image by \Dana{complete}.
+Given an image showing two objects, the target one with class $c_t$ and the perturbed one and their set of pixels \Dana{complete notation}, the $i^\text{th}$ layer is \Dana{complete in words and mathematically}.
+A layered neighborhood is \Dana{complete in words and mathematically}.
+We can define our problem.
+Given a classifier $F$\Dana{complete its function}, an image $x$ of size $n\times m$ containing two objects: $c_{target}$ and $c_{non-target}$ \textrm{s.t.} $F(x)$ = \{$c_{target}$, $c_{non-target}$\}, \Dana{probably merge with the above}
 we define the set of layers to be:
 \begin{gather*}
     L_x = \{l_0^x, l_1^x, \ldots, l_r^x\}\\
@@ -18,7 +27,7 @@ In addition, we assume a weight vector, assigning a weight for each layer:
 \begin{gather*}
     w_x = (w_0^x, w_1^x, \ldots, w_r^x)\\
 \end{gather*}
-
+\Dana{probably merge with the above}
 We aim to build a program that returns a sequence of epsilons $(\varepsilon_0^x, \varepsilon_1^x, \ldots, \varepsilon_r^x)$ representing a maximal robust perturbations of the pixels in the corresponding layers for the target class.
 Formally:
 \begin{gather*}
@@ -28,3 +37,6 @@ Formally:
     (2)  \varepsilon_x  maximizes the term  w_x \times \varepsilon_x^T\\
     N(x) = \{x' \mid \forall l_d^x\in L_x: \forall (i,j)\in l_d^x: x'_{i,j} \in [x_{i,j}-\varepsilon_d^x, x_{i,j}+\varepsilon_d^x]\}\\
 \end{gather*}
+\Dana{comment 1: don't put \text{$} in gather env}
+\Dana{comment 2: we don't build programs, but rather algorithms}
+\Dana{comment 3: in this section, we aim to compute maximal neighborhoods, not design an algorithm, this will come in the nxt section}  
