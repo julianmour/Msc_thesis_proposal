@@ -37,8 +37,7 @@ For this setting, we propose a new attack model and a corresponding local robust
 %\Dana{complete as in the previous sentence}.
 This definition allows one to understand how changing a specific object in a multi-labeled image affects another's classification in a multi-label classifiers and identify their robustness relation.
 %\Dana{complete the motivation to this definition}.
-For simplicity, we will focus on one untarget object and one target object;
-A relation between two objects in an image.
+For simplicity's sake, we assume the image shows two objects, the target object and the perturbed object.
  %want to explore the robustness of different multi-label classifiers in one class - the target class, while adding perturbation around another - the non-target class.
 Formally, we model the neighborhood by a sequence of epsilons, each corresponds to the maximal allowed perturbation in its respective layer.
 The first epsilon corresponds to the pixels at the perturbed object, the next one to the pixels immediately surrounding the perturbed object and so on. %  representing a robust perturbation per each layer surrounding the non-target object.
@@ -61,7 +60,7 @@ To this end, we propose to define gradients from the verifier's output. %The syn
 \paragraph{Preliminary results}
 In our preliminary research, we implemented a basic version of the above approach.
 We evaluate it on the DOUBLE-MNIST test dataset~\cite{DoubleMNIST}.
-We evaluate ran our algorithm on three different CNN multi-label DOUBLE-MNIST classifiers that were trained differently: without a defense, with an $L_0$-based defense~\cite{L0} and with the PGD defense~\cite{PGD}.
+We evaluate our algorithm on three different CNN multi-label DOUBLE-MNIST classifiers that were trained differently: without a defense, with an $L_0$-based defense~\cite{L0} and with the PGD defense~\cite{PGD}.
 Results show that the latter model is the most robust. %without a defense and with an $L_0$-based defended networks, a smaller norm of layer perturbation is achieved than in networks with PGD defense.
 \Julian{check after getting PGD results}.
 %\Dana{complete}.
@@ -86,4 +85,4 @@ We also plan to rely on sensitive layers, to dynamically update the weight vecto
 %To optimize a robust layer-neighborhood, we compute some gradients in which we can expand our neighborhood and try to keep it robust.
 %Similarly, we might need to shrink a non-robust layer-neighborhood so that it becomes robust.
 %The shrinking process can be done in several ways, such as defining a shrinking weight for each layer.
-%Weights can be fixed (defined by the index of the layer) or not (e.g.\ sensitivity weights).
+%Weights can be fixed (defined by the index of the layer) or not (e.g.\ sensitivity weights). 
