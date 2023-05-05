@@ -26,21 +26,43 @@ In particular, the verifier only has to prove that one of the labels is the targ
     
     \paragraph{The optimizer}
     Our optimizer expands a robust neighborhood by computing the gradient of the optimization problem defined in the previous section.
-    Since it is a constrained optimization, we relax the constraint and add an equivalent term to the optimization goal, as standard. We call this term \emph{the robustness level} (RL).
+    Since it is a constrained optimization, we relax the constraint and add an equivalent term to the optimization goal, as standard.
+    We call this term \emph{the robustness level} (RL).
     To expand a robust neighborhood, our optimizer 
     computes the gradients of both terms.
     The norm's gradient is computed in a straightforward way while the RL's gradient is computed using the weakest points found by the verifier.
     Given the gradients, the optimizer expands the neighborhood by a small step and submits to the verifier. %At last, we calculate the step gradient, which is a combination of both previous gradients, and expand the neighborhood towards the step gradient.
     
     \paragraph{The CEGIS component}
-    The CEGIS components takes a non-robust neighborhood and the previously robust neighborhood  attempts to identify directions of the previously robust neighborhood that cannot be further expanded. %If the neighborhood checked by the verifier isn't robust, then we skip the optimization part.
+    The CEGIS components takes a non-robust neighborhood and the previously robust neighborhood attempts to identify directions of the previously robust neighborhood that cannot be further expanded. %If the neighborhood checked by the verifier isn't robust, then we skip the optimization part.
     %Instead, we try to minimally shrink the neighborhood so that its robust.
     Computing the exact directions requires an exponential number of queries to the verifier.
-    Instead, we consider two approaches:
+    Instead, we assume a cutting weights vector;
+    A cutting weight per layer, where we shrink the current non-robust layer-neighborhood in the direction of the previously robust neighborhood, each layer according to its cutting weight.
+    Formally:
+    \begin{gather*}
+        cw_x = (cw_0^x, cw_1^x, \ldots, cw_r^x)\\
+        cw_x^* = (1 - cw_0^x, 1 - cw_1^x, \ldots, 1 - cw_r^x)\\
+        {\varepsilon_x}' = \varepsilon_x \odot cw_x^T + \varepsilon_x^* \odot {cw_x^*}^T\\
+        $Where:$\\
+        \varepsilon_x $ is the current non-robust epsilons sequence$\\
+        \varepsilon_x^* $ is the previously robust epsilons sequence$\\
+        {\varepsilon_x}' $ is the new epsilons sequence$\\
+    \end{gather*}
+    We consider two approaches:
     \begin{itemize}
-        \item Fixed weights - We shrink the neighborhood using fixed weights, where we aim to shrink the neighborhood more in layers that are far from the non-target object and less in layers that are close to it.\Dana{not clear, can you define it mathematically?}
+        \item Fixed weights - We shrink the neighborhood using fixed weights, where we aim to shrink the neighborhood more in layers that are far from the non-target object and less in layers that are close to it:
+        \begin{gather*}
+            cw_x = ({\frac{r}{r+1}}^5, {\frac{r-1}{r+1}}^5, {\frac{r-2}{r+1}}^5, \ldots, 0)
+        \end{gather*}
+%        \Dana{not clear, can you define it mathematically?}
         \item Sensitivity weights - Similar to the fixed weights approach, but we aim to shrink more in layers that are less sensitive to perturbations.
-        We get the sensitivity weights of an image by using the Vanilla Gradient method, introduced by Simonyan et al.~\cite{VANILLAGRADIENT}.\Dana{same comment, this part is important because it's the novel part}
+        We get the sensitivity weights of an image by using the Vanilla Gradient method, introduced by Simonyan et al.~\cite{VANILLAGRADIENT}.
+        \begin{gather*}
+            cw_x = (sw_0^x, sw_1^x, \ldots, sw_r^x,)\\
+            $Where $sw_i^x < sw_j^x$ iff $layer_i$ is more sensitive to perturbations than $layer_j\\
+        \end{gather*}
+%        \Dana{same comment, this part is important because it's the novel part}
     \end{itemize}
     Then, the optimizer is given \Dana{complete}. %The new layer-neighborhood will be the input of the verifier in the next iteration.
 
