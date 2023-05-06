@@ -11,7 +11,15 @@ An example of an image is shown in Figure~\ref{fig:double-mnist-sample}. %, wher
     \caption{DOUBLE-MNIST sample}
     \label{fig:double-mnist-sample}
 \end{figure}
-We ran our algorithm on three different CNN multi-label DOUBLE-MNIST classifiers, all with the same architecture\Dana{describe it and how many neurons} but a different training procedure:
+We ran our algorithm on three different CNN multi-label DOUBLE-MNIST classifiers, all with the same architecture (Figure~\ref{fig:arch_labeled}).
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{arch_labeled.png}
+    \caption{Classifiers' architecture - 2 Convolutional layers, 1 Max-Pool layer and 1 FC layer}
+    \label{fig:arch_labeled}
+\end{figure}
+%\Dana{describe it and how many neurons}
+but a different training procedure:
 %While the three of them solve the same classification problem, they differ in their training process:
 \begin{itemize}
     \item Without defense. %- This network is trained regularly on the original DOUBLE-MNIST training dataset, without additional processing done to the training dataset.
@@ -23,7 +31,7 @@ We ran our algorithm on three different CNN multi-label DOUBLE-MNIST classifiers
     %Therefore, training the model with such adversarial examples should make the network more robust.
 \end{itemize} 
 
-  In Figure~\ref{fig:No defense} we present results of our program ran on this classifier and a single image, as a heatmap representing the epsilons per each layer.
+  In Figure~\ref{fig:No defense} we present results of our program ran on a classifier trained without defense, and a single image, as a heatmap representing the epsilons per each layer.
     \begin{figure}
          \centering
          \begin{subfigure}[b]{0.4\textwidth}
@@ -42,7 +50,7 @@ We ran our algorithm on three different CNN multi-label DOUBLE-MNIST classifiers
          \caption{No Defense}
          \label{fig:No defense}
      \end{figure}
-     In Figure~\ref{fig:L0 defense} we present results of our program ran on this classifier and a single image, as a heatmap representing the epsilons per each layer.
+     In Figure~\ref{fig:L0 defense} we present results of our program ran on a classifier trained with $L_0$ defense, and a single image, as a heatmap representing the epsilons per each layer.
     \begin{figure}
          \centering
          \begin{subfigure}[b]{0.4\textwidth}

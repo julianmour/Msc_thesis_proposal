@@ -37,17 +37,12 @@ In particular, the verifier only has to prove that one of the labels is the targ
     The CEGIS components takes a non-robust neighborhood and the previously robust neighborhood attempts to identify directions of the previously robust neighborhood that cannot be further expanded. %If the neighborhood checked by the verifier isn't robust, then we skip the optimization part.
     %Instead, we try to minimally shrink the neighborhood so that its robust.
     Computing the exact directions requires an exponential number of queries to the verifier.
-    Instead, we assume a cutting weights vector;
-    A cutting weight per layer, where we shrink the current non-robust layer-neighborhood in the direction of the previously robust neighborhood, each layer according to its cutting weight.
-    Formally:
+    Instead, we assume a cutting weights vector $cw_x$;
+    A cutting weight per layer, where we compute the new epsilon sequence $\varepsilon_x$ of the new layered neighborhood by shrinking the current non-robust neighborhood (defined by $\varepsilon_x$) in the direction of the previously robust neighborhood (defined by $\varepsilon_x^*$), each layer according to its cutting weight:
     \begin{gather*}
         cw_x = (cw_0^x, cw_1^x, \ldots, cw_r^x)\\
         cw_x^* = (1 - cw_0^x, 1 - cw_1^x, \ldots, 1 - cw_r^x)\\
         {\varepsilon_x}' = \varepsilon_x \odot cw_x^T + \varepsilon_x^* \odot {cw_x^*}^T\\
-        $Where:$\\
-        \varepsilon_x $ is the current non-robust epsilons sequence$\\
-        \varepsilon_x^* $ is the previously robust epsilons sequence$\\
-        {\varepsilon_x}' $ is the new epsilons sequence$\\
     \end{gather*}
     We consider two approaches:
     \begin{itemize}
