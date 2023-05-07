@@ -12,39 +12,33 @@ The neighborhood is defined by a sequence of epsilons representing the perturbat
 We begin with definitions and then define our problem.
 A multi-classifier is a function mapping an instance (in our case an image) to a subset of labels from a set of classes $C$ -
 %\Dana{complete}
-$F:[0, 1]^{n \times m} \rightarrow P(C)$\\
+$F:[0, 1]^{n \times m} \rightarrow P(C)$\\\Dana{is this how you define it in your code? typically there's a score function, and i thought it's also in your case and that there are thresholds. Read Marvel and see how it's defined there}.
 %\Dana{complete}.
-Given an image, the classification of $F$ is $F(x)$ = \{$c_{target}$, $c_{non-target}$\}.
+Given an image, the classification of $F$ is $F(x)$ = \{$c_{target}$, $c_{non-target}$\}.\Dana{check the previous comment, it should also change, also the classification can't be in term of the target and non target class because it can b any two classes; check how it's defined in Marvel}
 %\Dana{complete}.
 A neighborhood of input $x$ is a set of inputs containing $x$.
-A neighborhood $I$ is robust if all inputs in it are classified to the target label: $\forall x' \in I: c_{target} \in F(x').$\\
+A neighborhood $I$ is robust if all inputs in it are classified to the target label: $\forall x' \in I: c_{target} \in F(x').$\\\Dana{fix it accordingly}
 %\Dana{complette with words and with mathematical notation}.
 We focus on layered neighborhoods.
 To define it, we denote the set of pixels showing an object in an image by $P_{object}$.
-Given an image showing two objects, the target one with class $c_{target}$ and the perturbed one with class $c_{non-target}$ and its set of pixels $P_{non-target}$, the $d^\text{th}$ layer is defined to be the set of pixels that are distant from $P_{non-target}$ by $d$ pixels, where we define the distance between a pixel $p_0 = (i_0, j_0)$ and a set of pixels $P$ to be the smallest distance from $p_0$ to a pixel $p_k = (i_k, j_k)$ in $P$:
-\begin{gather*}
-    dist((i_0,j_0), P) = \min_{(i_k, j_k) \in P}\{dist((i_0, j_0), (i_k, j_k))\}\\
-    l_d^x = \{(i,j) \in [1,n]\times [1,m] \mid dist((i, j), P_{non-target}) = d\}\\
-\end{gather*}
+Given an image showing two objects, the target one with class $c_{target}$ and the perturbed one with class $c_{non-target}$ and its set of pixels $P_{non-target}$, the $d^\text{th}$ layer is the set of pixels whose distance from $P_{non-target}$ by $d$ pixels\Dana{with respect to what norm?}. Given two pixels $p,p' = (i, j)\in [n]\times [m]$, their distance is $dist(p,p')=$\Dana{complete. Is it L inf norm?}. Given a pixel $p = (i, j)\in [n]\times [m]$ and a set of pixels $P\subseteq  [n]\times [m]$, their distance is the minimum distance of $p$ to any pixel in $P$: $dist(p, P) = \min\{dist(p, p') \mid p' \in P\}$. Given an image $x$, a set of object's pixels and distance $d$, the $d$ layer is:
+$$    l_d^{x,P} = \{p \in [n]\times [m] \mid dist(p, P) = d\}$$.
 %Formally, we define the set of layers $L_x$:
 %\begin{gather*}
 %    L_x = \{l_0^x, l_1^x, \ldots, l_r^x\}\\
 %    \textrm{s.t.}  l_d^x = \{(i,j) \in [1,n]\times [1,m] \mid dist((i, j),$ non-target object$) = d\}
 %\end{gather*}
-We denote the set of layers by $L_x = \{l_0^x, l_1^x, \ldots, l_r^x\}$.
-A \textbf{layered neighborhood} $I$ of an image $x$ is defined by giving a maximal allowed perturbation $\varepsilon_d^x$ for the $d^\text{th}$ layer, where $x'$ is in $I$ if and only if each pixel's value in $x'$ differs from its value in $x$ by at most $\varepsilon_d^x$:\\
+Given an image $x$ and the non-target object's pixels $P_{NT}$ the set of layers by $L_x = \{l_0^x, l_1^x, \ldots, l_r^x\}$.\Dana{what is $r$?it's not defined. is it wrt the target object? the image dimensions?}\Dana{add $P_{NT}$ to latyers as superscript}
+
+\paragraph{A layered neighborhood} Given an image $x$, the non-target object's pixels $P_{NT}$ and a series of maximal allowed perturbation for every layer $\epsilon=(\epsilon_0,\ldots,\epsilon_r)$, a layered neighborhood $I^{x,P_{NT}}_\epsilon$ is the set of all images whose perturbation at layer $d$ is bounded by the respective perturbation limit:
 %\Dana{complete in words and mathematically}.
-\begin{gather*}
-    \varepsilon_x = (\varepsilon_0^x, \varepsilon_1^x, \ldots, \varepsilon_r^x)\\
-    I = \{x' \mid \forall l_d^x\in L_x: \forall (i,j)\in l_d^x: x'_{i,j} \in [x_{i,j}-\varepsilon_d^x, x_{i,j}+\varepsilon_d^x]\}\\
-\end{gather*}
-We also denote the set of all robust layered neighborhoods of an image $x$ with $RLN_x$, and the set of epsilon sequences representing them with $RLN_x^\varepsilon$.\\
-In addition, we assume a weight vector, assigning a weight for each layer:
-\begin{gather*}
-    w_x = (w_0^x, w_1^x, \ldots, w_r^x)\\
-\end{gather*}
+$$
+    I^{x,P_{NT}}_\epsilon = \{x' \in[0, 1]^{n \times m} \mid \forall d\leq r\ \forall (i,j)\in l_d^{x,P_{NT}}: ||x'_{i,j} -x_{i,j}||_\infty<\epsilon_d\}\\
+$$
+We also denote the set of all robust layered neighborhoods of an image $x$ with $RLN_x$, and the set of epsilon sequences representing them with $RLN_x^\varepsilon$.\\\Dana{it's not how we need to define it, see how we define the problem in Marvel}
+Given a weight vector $w_x = (w_0, w_1, \ldots, w_r)$, assigning a weight for each layer, the size of a layered neighborhood is: \Dana{complete}.
 Now we can define our problem.
-Given a classifier $F:[0, 1]^{n \times m} \rightarrow P(C)$, an image $x$ of size $n\times m$ containing two objects: $c_{target}$ and $c_{non-target}$ \textrm{s.t.} $F(x)$ = \{$c_{target}$, $c_{non-target}$\},
+Given a classifier $F:[0, 1]^{n \times m} \rightarrow P(C)$\Dana{fix}, an image $x$ of size $n\times m$ \Dana{fix: in [0,1]...}containing two objects: $c_{target}$ and $c_{non-target}$ \textrm{s.t.} $F(x)$ = \{$c_{target}$, $c_{non-target}$\},
 %\Dana{probably merge with the above}
 %we define the set of layers to be:
 %\begin{gather*}
@@ -61,6 +55,7 @@ We aim to compute a sequence of epsilons $\varepsilon_x^* = ({\varepsilon_0^x}^*
     \varepsilon_x^*  = argmax_{\varepsilon_x \in RLN_x^\varepsilon} \{w_x \times \varepsilon_x^T\}\\
 %    I_x = \{x' \mid \forall l_d^x\in L_x: \forall (i,j)\in l_d^x: x'_{i,j} \in [x_{i,j}-\varepsilon_d^x, x_{i,j}+\varepsilon_d^x]\}\\
 \end{gather*}
+\Dana{fix the above so it will be like in Marvel}
 %\Dana{comment 1: don't put \$ in gather env}
 %\Dana{comment 2: we don't build programs, but rather algorithms}
 %\Dana{comment 3: in this section, we aim to compute maximal neighborhoods, not design an algorithm, this will come in the nxt section}
