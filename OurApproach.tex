@@ -25,16 +25,17 @@ We next provide details about the different components and explain the open chal
     %The verifier will say that the neighborhood is robust if and only if all images in the neighborhood are classified to the target class.
     In our preliminary research, we rely on the mixed-integer linear program (MILP) based verifier, called MIPVerify~\cite{MIPVERIFY}.
     This verifier encodes the robustness task into a MILP maximization problem and uses the Gurobi Optimizer to solve it.
-    The MILP objective (the term we want to maximize) represents the difference between the highest score of an incorrect class and the score of the correct class ($c_{target}$).
+    For an input $x$, a neighborhood $I(x)$ and classifier $F$, the main task is to prove or refute robustness.
+    The MILP objective represents the difference between the highest score of an incorrect class and the score of the correct class ($c_{target}$) of a classifier $F$, and the MILP solution is an input $x'$ that maximizes it.
     \begin{gather*}
-        max\{max_{c \in C, c \neq c_{target}}\{score(c)\} - score(c_{target})\}
+        \max_{x' \in I(x)}\{max_{c \in C, c \neq c_{target}}\{F(x')_c\} - F(x')_{c_{target}}\}
     \end{gather*}
     A negative value of the maximized objective indicates a robust neighborhood.
     We adapt it to multi-label classifiers by changing the objective.
     Instead of picking the highest score, we now consider the second-highest score.
     Meaning that the objective now represents the difference between the second-highest score of an incorrect class and the score of the target class ($c_{target}$).
     \begin{gather*}
-        max\{2^{nd}max_{c \in C, c \neq c_{target}}\{score(c)\} - score(c_{target})\}
+        \max_{x' \in I(x)}\{2^{nd}max_{c \in C, c \neq c_{target}}\{F(x')_c\} - F(x')_{c_{target}}\}
     \end{gather*}
     A negative value of the maximized objective indicates a robust neighborhood in the multi-label case.
     Beyond determining whether a neighborhood is robust or not, the verifier returns a set of points maximizing the objective, to which we call \emph{the weakest points of the image}.

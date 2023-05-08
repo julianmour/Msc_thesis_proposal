@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.2)  7 MAY 2023 20:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.2)  9 MAY 2023 01:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -500,33 +500,33 @@ cmr/m/n/10.95 .[]\OT1/cmr/bx/n/10.95 Dana:
  []
 
 ) (OurApproach.tex [3] [4]) (PreResults.tex
-<3.png, id=125, 64.24pt x 64.24pt>
+<3.png, id=126, 64.24pt x 64.24pt>
 File: 3.png Graphic file (type png)
 <use 3.png>
 Package pdftex.def Info: 3.png  used on input line 11.
 (pdftex.def)             Requested size: 135.89174pt x 135.9029pt.
-<arch_labeled.png, id=127, 905.18175pt x 376.40625pt>
+<arch_labeled.png, id=128, 905.18175pt x 376.40625pt>
 File: arch_labeled.png Graphic file (type png)
 <use arch_labeled.png>
 Package pdftex.def Info: arch_labeled.png  used on input line 18.
 (pdftex.def)             Requested size: 362.37569pt x 150.69193pt.
-<no_defense_fixed_weights.png, id=131, 462.528pt x 346.896pt>
+<no_defense_fixed_weights.png, id=132, 462.528pt x 346.896pt>
 File: no_defense_fixed_weights.png Graphic file (type png)
 <use no_defense_fixed_weights.png>
 Package pdftex.def Info: no_defense_fixed_weights.png  used on input line 39.
 (pdftex.def)             Requested size: 181.18439pt x 135.88702pt.
-<no_defense_sensitivity_weights.png, id=132, 462.528pt x 346.896pt>
+<no_defense_sensitivity_weights.png, id=133, 462.528pt x 346.896pt>
 File: no_defense_sensitivity_weights.png Graphic file (type png)
 <use no_defense_sensitivity_weights.png>
 Package pdftex.def Info: no_defense_sensitivity_weights.png  used on input line
  46.
 (pdftex.def)             Requested size: 181.18439pt x 135.88702pt.
-<l0_defense_fixed_weights.png, id=134, 462.528pt x 346.896pt>
+<l0_defense_fixed_weights.png, id=135, 462.528pt x 346.896pt>
 File: l0_defense_fixed_weights.png Graphic file (type png)
 <use l0_defense_fixed_weights.png>
 Package pdftex.def Info: l0_defense_fixed_weights.png  used on input line 58.
 (pdftex.def)             Requested size: 181.18439pt x 135.88702pt.
-<l0_defense_sensitivity_weights.png, id=135, 462.528pt x 346.896pt>
+<l0_defense_sensitivity_weights.png, id=136, 462.528pt x 346.896pt>
 File: l0_defense_sensitivity_weights.png Graphic file (type png)
 <use l0_defense_sensitivity_weights.png>
 Package pdftex.def Info: l0_defense_sensitivity_weights.png  used on input line
@@ -569,13 +569,14 @@ ublic/amsfonts/cm/cmr12.pfb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/julianmour/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/julianmour/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ju
-lianmour/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+lianmour/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 ><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmti10.pfb>
+/cm/cmsy8.pfb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmti10.pfb>
 Output written on "C:/Users\julianmour\OneDrive - Technion\Documents\Research\P
-roposal\out\main.pdf" (10 pages, 474413 bytes).
+roposal\out\main.pdf" (10 pages, 483666 bytes).
 PDF statistics:
- 273 PDF objects out of 1000 (max. 8388607)
+ 278 PDF objects out of 1000 (max. 8388607)
  67 named destinations out of 1000 (max. 500000)
  103 words of extra memory for PDF output out of 10000 (max. 10000000)
 
