@@ -25,69 +25,73 @@ We next provide details about the different components and explain the open chal
     %The verifier will say that the neighborhood is robust if and only if all images in the neighborhood are classified to the target class.
     In our preliminary research, we rely on the mixed-integer linear program (MILP) based verifier, called MIPVerify~\cite{MIPVERIFY}.
     This verifier encodes the robustness task into a MILP maximization problem and uses the Gurobi Optimizer to solve it.
-    For an input $x$, a neighborhood $I(x)$ and classifier $F$, the main task is to prove or refute robustness.
-    The MILP objective represents the difference between the highest score of an incorrect class and the score of the correct class ($c_{target}$) of a classifier $F$, and the MILP solution is an input $x'$ that maximizes it.
+    We adapt the verifier to multi-label classifiers by adapting the objective function.
+    For a single-label classifier, the objective function is the difference between the highest score and the score of the target class:
     \begin{gather*}
-        \max_{x' \in I(x)}\{max_{c \in C, c \neq c_{target}}\{F(x')_c\} - F(x')_{c_{target}}\}
+        \max_{c \in C, c \neq c_{t}}\{F(x')_c- F(x')_{c_{t}}\mid x'\in I(x)\} 
     \end{gather*}
-    A negative value of the maximized objective indicates a robust neighborhood.
-    We adapt it to multi-label classifiers by changing the objective.
-    Instead of picking the highest score, we now consider the second-highest score.
-    Meaning that the objective now represents the difference between the second-highest score of an incorrect class and the score of the target class ($c_{target}$).
+    If the difference is negative, the neighborhood is robust. Otherwise, it is not robust.
+    We call inputs in $I(x)$ maximizing this objective function the \emph{weakest points}, because they are the closest to the decision boundary.
+%     A negative value of the maximized objective indicates a robust neighborhood.
+
+    We adapt this objective function to multi-label classifiers as follows.
+    Since classification is a set of the classes, instead of comparing to the highest score, we compare to the second highest score:
+    %Meaning that the objective now represents the difference between the second-highest score of an incorrect class and the score of the target class ($c_{target}$).
     \begin{gather*}
-        \max_{x' \in I(x)}\{2^{nd}max_{c \in C, c \neq c_{target}}\{F(x')_c\} - F(x')_{c_{target}}\}
+        2^{nd}\max_{c \in C, c \neq c_{t}}\{F(x')_c- F(x')_{c_{t}}\mid x'\in I(x)\} 
     \end{gather*}
-    A negative value of the maximized objective indicates a robust neighborhood in the multi-label case.
-    Beyond determining whether a neighborhood is robust or not, the verifier returns a set of points maximizing the objective, to which we call \emph{the weakest points of the image}.
-    These points later help the optimizer to identify robust directions to expand the current neighborhood.
+    A negative value indicates that the neighborhood is robust with respect to $c_t$.
+    %Beyond determining whether a neighborhood is robust or not, the verifier returns a set of points maximizing the objective, to which we call \emph{the weakest points of the image}.
+    As before, the inputs maximizing this objective are called the weakest points. These points later help the optimizer to identify robust directions to expand the current neighborhood.
     %These are the points in the checked neighborhood that are least robust and the verifier will pass them to the optimizer as well.
     
     \paragraph{The optimizer}
-    Our optimizer expands a robust neighborhood by computing the gradient of the optimization problem defined in the previous section.
-    Since it is a constrained optimization, we relax the constraint and add an equivalent term to the optimization goal, as standard.
-    We call this term \emph{the robustness level} (RL).
-    To expand a robust neighborhood, our optimizer 
-    computes the gradients of both terms.
-    The norm's gradient is computed in a straightforward way while the RL's gradient is computed using the weakest points found by the verifier.
+    Our optimizer follows the approach of~\cite{MARVEL} and expands a robust neighborhood by computing the gradient of the optimization problem defined in the previous section.
+    Since it is a constrained optimization, we relax the constraints and add equivalent terms to the optimization goal, similarly to ~\cite{MARVEL}.
+    %We call this term \emph{the robustness level} (RL).\Dana{to define it, you need to present here the optimization function corresponding to the one on page 7 before}
+    %To expand a robust neighborhood, our optimizer 
+    %computes the gradients of both terms.
+    %The norm's gradient is computed in a straightforward way while the RL's gradient is computed using the weakest points found by the verifier.
     Given the gradients, the optimizer expands the neighborhood by a small step and submits to the verifier. 
 %    \Dana{is there an adaptation to mulit-label or is it like Marvel? we need to describe it}
 %    \Julian{No adaptation in this part}
     %At last, we calculate the step gradient, which is a combination of both previous gradients, and expand the neighborhood towards the step gradient.
     
     \paragraph{The CEGIS component}
-    The CEGIS components takes a non-robust neighborhood and the previously robust neighborhood and attempts to identify directions of the previously robust neighborhood that cannot be further expanded. %If the neighborhood checked by the verifier isn't robust, then we skip the optimization part.
+    The CEGIS component takes a non-robust neighborhood and the previously robust neighborhood and attempts to identify directions that must be shrunk towards making the (non-robust) neighborhood robust. %If the neighborhood checked by the verifier isn't robust, then we skip the optimization part.
     %Instead, we try to minimally shrink the neighborhood so that its robust.
     Computing the exact directions requires an exponential number of queries to the verifier.
-    Instead, we want shrink the non-robust neighborhood in the direction of the previously robust neighborhood.
-    We shrink each layer according to an assumed weight - the cutting weight.
-    The layer's cutting weight determines how much should the layer be shrunk towards the previously robust neighborhood.
-    We notate the cutting weights vector with $cw_x$, and its complement vector with $cw_x^*$ and define it as follows:
+    Instead, we shrink the non-robust neighborhood in the direction of the previously robust neighborhood.
+    In our preliminary research,
+    we shrink each layer according to a given weight vector, called \emph{the cutting weight}, which may depend on the input: $cw_x = (cw_0^x, cw_1^x, \ldots, cw_r^x)$.
+    %The layer's cutting weight determines how much should the layer be shrunk towards the previously robust neighborhood.
+    %We notate the cutting weights vector with $cw_x$, and its complement vector with $cw_x^*$ and define it as follows:
 %    \Dana{what is a cutting vector? you need to first provide a high level explanation before the math notation};
-    \begin{gather*}
-        cw_x = (cw_0^x, cw_1^x, \ldots, cw_r^x)\\
-        cw_x^* = (1 - cw_0^x, 1 - cw_1^x, \ldots, 1 - cw_r^x)\\
-    \end{gather*}
+    %\begin{gather*}
+    %    cw_x = (cw_0^x, cw_1^x, \ldots, cw_r^x)\\
+    %    cw_x^* = (1 - cw_0^x, 1 - cw_1^x, \ldots, 1 - cw_r^x)\\
+    %\end{gather*}
     Mathematically, this translates to computing a new epsilon sequence $\varepsilon_x'$ that is a weighted average of the current non-robust epsilon sequence $\varepsilon_x$ and the previously robust neighborhood $\varepsilon_x^*$.
     We use \emph{element-wise multiplication} ($\odot$) to multiply each element in the epsilon sequences with its corresponding weight in the weights vectors:
 %    \Dana{we cannot place all math notation together; please fix it so it looks like the previous section}.
-    \begin{gather*}
-        {\varepsilon_x}' = \varepsilon_x \odot cw_x^T + \varepsilon_x^* \odot {cw_x^*}^T\\
-    \end{gather*}
+    $
+        {\varepsilon_x}' = \varepsilon_x \odot cw_x^T + \varepsilon_x^* \odot {cw_x^{-1}}^T
+    $, where $ cw_x^{-1} = (1 - cw_0^x, 1 - cw_1^x, \ldots, 1 - cw_r^x)$. 
 %    \Dana{what is the $\odot$ operation?}
-    We consider two approaches:
+    We consider two definitions for the cutting weights:
     \begin{itemize}
-        \item Fixed weights - We shrink the neighborhood using fixed weights, where we aim to shrink the neighborhood more in layers that are far from the non-target object and less in layers that are close to it:
+        \item Fixed weights shrinking the neighborhood more in layers that are far from the non-target object and less in layers that are close to it:
         \begin{gather*}
             cw_x = ({\frac{r}{r+1}}^5, {\frac{r-1}{r+1}}^5, {\frac{r-2}{r+1}}^5, \ldots, 0)
         \end{gather*}
 %        \Dana{not clear, can you define it mathematically?}
-        \item Sensitivity weights - Similar to the fixed weights approach, but we aim to shrink more in layers that are less sensitive to perturbations.
-        We get the sensitivity weights of an image by using the Vanilla Gradient method, introduced by Simonyan et al.~\cite{VANILLAGRADIENT}.
-        This method can be used to find sensitive pixels in an image by simply computing the gradient of the loss function with respect to the image pixels using backpropagation.
+        \item Sensitivity weights shrinking more in layers that are less sensitive to perturbations.
+        The sensitivity weights of an image are computed by using the Vanilla Gradient method, introduced by Simonyan et al.~\cite{VANILLAGRADIENT}.
+        This method computes the sensitive pixels in an image by computing the gradient of a loss function with respect to the image pixels using backpropagation.
         Pixels with large gradients are likely to be more sensitive to perturbations, and perturbing them is likely to affect the classifier's robustness more.
-        We translate the problem of finding sensitive pixels to finding sensitive layers by averaging all pixels' gradients in each layer, and achieve the sensitivity weights vector
-        $cw_x = (sw_0^x, sw_1^x, \ldots, sw_r^x,)$
-        where $sw_i^x < sw_j^x$ iff layer i is more sensitive to perturbations than layer j.
+        We translate the problem of finding sensitive pixels to finding sensitive layers by averaging all pixels' gradients in each layer. Accordingly, we define the cutting vector 
+        $cw_x = (sw_0^x, sw_1^x, \ldots, sw_r^x)$,
+        where $sw_i^x < sw_j^x$ implies that layer $i$ is more sensitive to perturbations than layer $j$.
 %        \Dana{please describe in high level what it means sensitivity and the vanilla graident approach}
 %        \Dana{same comment, this part is important because it's the novel part}
     \end{itemize}
