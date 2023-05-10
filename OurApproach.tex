@@ -10,8 +10,8 @@ However, this approach is suitable in case the weight vector poses a strict orde
 Instead, we aim to build on the oracle-guided numerical verification proposed in~\cite{MARVEL}, to obtain a scalable algorithm.
 Technically, our algorithm has three main components, that iteratively interact with one another:
 \begin{itemize}
-    \item A local robustness verifier: Given a classifier and a layer-neighborhood $I$ of an image $x$, it determines whether the classifier is robust in this neighborhood.
-        \item A numerical optimizer: Given a classifier and a robust layer-neighborhood, it attempts to expand the neighborhood into a larger robust neighborhood, with respect to the weight vector. %by expanding it more, as we intend to maximize the norm of the neighborhood.
+    \item A local robustness verifier: Given a classifier and a layered neighborhood ${N^{o}_\epsilon}(x)$ of an image $x$ and object $o$, it determines whether the classifier is robust in this neighborhood.
+        \item A numerical optimizer: Given a classifier and a robust layered neighborhood, it attempts to expand the neighborhood into a larger robust neighborhood, with respect to the weight vector. %by expanding it more, as we intend to maximize the norm of the neighborhood.
     \item A counterexample-guided inductive synthesiser (CEGIS): Given a classifier and a \emph{non-robust} layer-neighborhood, it attempts to identify directions of the previously robust neighborhood that cannot be further expanded. 
     \end{itemize}
 The components interact until the neighborhood cannot be further expanded.
@@ -28,21 +28,22 @@ We next provide details about the different components and explain the open chal
     We adapt the verifier to multi-label classifiers by adapting the objective function.
     For a single-label classifier, the objective function is the difference between the highest score and the score of the target class:
     \begin{gather*}
-        \max_{c \in C, c \neq c_{t}}\{F(x')_c- F(x')_{c_{t}}\mid x'\in I(x)\} 
+        \max_{c \in C, c \neq c_{t}}\{F(x')_c- F(x')_{c_{t}}\mid x'\in N(x)\}
     \end{gather*}
     If the difference is negative, the neighborhood is robust. Otherwise, it is not robust.
-    We call inputs in $I(x)$ maximizing this objective function the \emph{weakest points}, because they are the closest to the decision boundary.
+    We call inputs in $N(x)$ maximizing this objective function the \emph{weakest points}, because they are the closest to the decision boundary.
 %     A negative value of the maximized objective indicates a robust neighborhood.
 
     We adapt this objective function to multi-label classifiers as follows.
     Since classification is a set of the classes, instead of comparing to the highest score, we compare to the second highest score:
-    %Meaning that the objective now represents the difference between the second-highest score of an incorrect class and the score of the target class ($c_{target}$).
+    %Meaning that the objective now represents the difference between the second-highest score of an incorrect class and the score of the target class ($c_{t}$).
     \begin{gather*}
-        2^{nd}\max_{c \in C, c \neq c_{t}}\{F(x')_c- F(x')_{c_{t}}\mid x'\in I(x)\} 
+        2^{nd}\max_{c \in C, c \neq c_{t}}\{F(x')_c- F(x')_{c_{t}}\mid x'\in N(x)\}
     \end{gather*}
     A negative value indicates that the neighborhood is robust with respect to $c_t$.
     %Beyond determining whether a neighborhood is robust or not, the verifier returns a set of points maximizing the objective, to which we call \emph{the weakest points of the image}.
-    As before, the inputs maximizing this objective are called the weakest points. These points later help the optimizer to identify robust directions to expand the current neighborhood.
+    As before, the inputs maximizing this objective are called the weakest points.
+    These points later help the optimizer to identify robust directions to expand the current neighborhood.
     %These are the points in the checked neighborhood that are least robust and the verifier will pass them to the optimizer as well.
     
     \paragraph{The optimizer}
@@ -89,11 +90,12 @@ We next provide details about the different components and explain the open chal
         The sensitivity weights of an image are computed by using the Vanilla Gradient method, introduced by Simonyan et al.~\cite{VANILLAGRADIENT}.
         This method computes the sensitive pixels in an image by computing the gradient of a loss function with respect to the image pixels using backpropagation.
         Pixels with large gradients are likely to be more sensitive to perturbations, and perturbing them is likely to affect the classifier's robustness more.
-        We translate the problem of finding sensitive pixels to finding sensitive layers by averaging all pixels' gradients in each layer. Accordingly, we define the cutting vector 
+        We translate the problem of finding sensitive pixels to finding sensitive layers by averaging all pixels' gradients in each layer.
+        Accordingly, we define the cutting vector
         $cw_x = (sw_0^x, sw_1^x, \ldots, sw_r^x)$,
         where $sw_i^x < sw_j^x$ implies that layer $i$ is more sensitive to perturbations than layer $j$.
-%        \Dana{please describe in high level what it means sensitivity and the vanilla graident approach}
-%        \Dana{same comment, this part is important because it's the novel part}
+%       \Dana{please describe in high level what it means sensitivity and the vanilla graident approach}
+%       \Dana{same comment, this part is important because it's the novel part}
     \end{itemize}
 %    Then, the optimizer is given \Dana{complete}. %The new layer-neighborhood will be the input of the verifier in the next iteration.
 
