@@ -2,43 +2,41 @@
 %! Date = 01/05/2023
 
 \section{Related Work}
-Our thesis topics mainly involve Neural-Networks Verifiers, Adversarial Attacks in Multi-Label Classification and Counter Example Guided Synthesis.
-We next review some related work.
-\subsection{Neural-Networks Verifiers}
-Neural network verifiers are tools or methods that are used to ensure the robustness of neural networks.
-These verifiers use mathematical techniques such as constraint solving and model checking to analyze the behavior of neural networks and ensure that they operate correctly under certain kinds of adversarial attacks.
-There are various neural network verification techniques, such as abstract interpretation (e.g.~\cite{ABSTRACTINTER, INCOMPLETE1}), linear programming (e.g.~\cite{MIPVERIFY}) and more.
-Verifiers are usually divided into two categories:
+Our thesis is related to neural network verification, adversarial attacks against multi-label classifiers, and counterexample-guided synthesis.
+
+\subsection{Neural Network Verification}
+Neural network verifiers analyze safety properties of neural networks.
+These verifiers rely on different mathematical techniques, such as constraint solving and model checking, to analyze the behavior of neural networks and determine whether the given property holds.
+There are various neural network verification techniques, such as abstract interpretation (e.g.~\cite{ABSTRACTINTER, INCOMPLETE1}), linear programming (e.g.~\cite{MIPVERIFY}) and more\Dana{add more, see Marvel}.
+Two main categories of verifiers are:
 \begin{itemize}
-    \item Incomplete Verifiers - an incomplete verifier may only be able to prove the absence of adversarial examples for a subset of the inputs (not all of them)~\cite{INCOMPLETE1, INCOMPLETE2}.
-    \item Complete Verifiers - a complete verifier can prove the absence of adversarial examples for all inputs~\cite{MIPVERIFY, COMPLETE}, but is likely more time expensive than other incomplete verifiers.
+    \item Complete verifiers: return a definite answer whether a given property, such as neighborhood robustness, holds or not~\cite{MIPVERIFY, COMPLETE}. Such verifiers tend to have long execution time and thus do not scale to large networks.
+        In our preliminary research, we rely on a complete verifier~\cite{MIPVERIFY}.
+    \item Incomplete verifiers: may also return \emph{unknown} for a given property. This allows the, to rely on approximate techniques which scale better~\cite{INCOMPLETE1, INCOMPLETE2}.
 \end{itemize}
-In our preliminary work we used $MIPVerify$, a MILP (Mixed Integer Linear Programming) verifier~\cite{MIPVERIFY} which is a complete verifier.
 
 \subsection{Adversarial Attacks in Multi-Label Classification}
-Adversarial attacks in multi-label classification refer to the phenomenon where an adversary intentionally modifies the input data to a multi-label classifier in order to cause misclassification or mislabeling of the input.
-In multi-label classification, each input can be assigned multiple labels, and the classifier is trained to predict a subset of these labels for each input.
-Adversarial attacks in this context can take various forms, such as adding perturbations to the input data to cause the classifier to predict any different incorrect subset of labels, or to cause the classifier to not predict a specific correct label.
-We focus on the latter.
-Most existing works on adversarial attacks have been focused on the case of multi-class single-label classification~\cite{SINGLElABEL1, SINGLElABEL2, SINGLElABEL3, SINGLElABEL4}.
-Several others on the case of multi-label classification, where attacks are mainly divided to two types: \textbf{(1)~Targeted Attacks} - aim to bring specific incorrect labels' scores to be the highest and \textbf{(2)~Untargeted Attacks} - aim to bring the correct labels' scores to not be the highest.
-Our property focuses on giving a robust neighborhood against a type of untargeted attacks;
-Such attacks that aim to bring a specific correct label's score to not be in the top picked labels.
-Related work:
-\begin{itemize}
-    \item Song et al.~\cite{MULTIlABEL1} Introduced targeted white-box attacks for multi-label classification.
-    They approached the problem by formulating it as an optimization problem and using gradient descent to solve it.
-    Through experimentation, they discovered that they could manipulate a multi-label classifier into producing any set of labels for a given input by adding an adversarial perturbation.
-    \item Zhou et al.~\cite{MULTIlABEL2} Suggested generating $L_{\infty}$-norm adversarial perturbations to trick multi-label classifiers.
-    They solved the problem by transforming the optimization problem of finding adversarial perturbations into a linear programming problem, which can be solved efficiently.
-    \item Another study by Yang et al.~\cite{MULTIlABEL3} Explored the potential for misclassification risk in multi-label classifiers, particularly in worst-case scenarios.
-    They approached the problem by formulating it as a bi-level set function optimization problem, and used random greedy search to find an approximate solution.
-\end{itemize}
+In an adversarial attack, an adversary intentionally perturbs an input to the classifier to cause misclassification.
+In multi-label classification, each input can be assigned multiple classes.
+Adversarial attacks in this setting can be defined with respect to various goals, such as causing the classifier to predict any different incorrect subset of classes or not predicting a given correct class.
+We focus on the latter goal, also known as untargeted attack.
+Most existing works on adversarial attacks have been focused on the case of multi-class single-label classification~\cite{SINGLElABEL1, SINGLElABEL2, SINGLElABEL3, SINGLElABEL4}.\Dana{is the previous sentence related to us? we are in multi label no?}
+%Several others on the case of multi-label classification, where attacks are mainly divided to two types: \textbf{(1)~Targeted Attacks} - aim to bring specific incorrect labels' scores to be the highest and \textbf{(2)~Untargeted Attacks} - aim to bring the correct labels' scores to not be the highest.
+%Our property focuses on giving a robust neighborhood against a type of untargeted attacks;
+%Such attacks that aim to bring a specific correct label's score to not be in the top picked labels.
+    Song et al.~\cite{MULTIlABEL1} introduce targeted white-box attacks for multi-label classification.
+    They approach the problem by formulating it as an optimization problem and then execute gradient descent.
+    Through experimentation, they discover that they could manipulate a multi-label classifier into producing any set of labels for a given input by adding an adversarial perturbation\Dana{what is the discovery? sounds like a solution to their optimization function}.
+    Zhou et al.~\cite{MULTIlABEL2} suggest generating $L_{\infty}$-norm adversarial perturbations to trick multi-label classifiers.
+    They solve the problem by transforming the optimization problem of finding adversarial perturbations into a linear programming problem, which can be solved efficiently.
+    Yang et al.~\cite{MULTIlABEL3} explore the potential for misclassification risk in multi-label classifiers, particularly in worst-case scenarios.
+    They approach the problem by formulating it as a bi-level set function optimization problem and use random greedy search to find an approximate solution.
+    \Dana{there are only three works? we need at least six and ideally ten if there are}
 
-\subsection{Counter Example Guided Synthesis}
-Counter example guided synthesis (CEGIS) is a technique used in formal verification and program synthesis to generate correct programs or system designs from specific given specifications.
-The basic idea behind CEGIS is to iteratively search for a candidate that satisfies the specification, while using counterexamples to refine the search space and guide the synthesis process.
-In this thesis we use CEGIS to find the desired epsilons sequence that will define a robust maximal layer-neighborhood;
-Our specification - a maximal robust layer-neighborhood, the counterexamples - adversarial examples and weakest points.
-We submit several queries to a verifier in each iteration and update the epsilons sequence accordingly, given the counterexamples.
-Previous work also used CEGIS to find maximal robust neighborhoods~\cite{CEGIS1, MARVEL, CEGIS2, CEGIS3}, we use similar approach as MaRVeL's~\cite{MARVEL}.
+\subsection{Counterexample-Guided Synthesis}
+Counter example guided synthesis (CEGIS) is a technique used in formal verification and program synthesis to generate correct programs or system designs for given specifications.
+CEGIS iteratively searches for a candidate, checks with an oracle whether the candidate satisfies the specification, and if not relies on counterexamples to refine the search space and guide the synthesis process.
+In this research, we use CEGIS to recover the search for a robust neighborhood after reaching a non-robust neighborhood. %desired epsilons sequence that will define a robust maximal layer-neighborhood;
+In our context, the specification is a robust layer-neighborhood, the oracle is the verifier, and the counterexamples are the weakest points.
+%We submit several queries to a verifier in each iteration and update the epsilons sequence accordingly, given the counterexamples.
+Previous work also used CEGIS to find maximal robust neighborhoods~\cite{CEGIS1, MARVEL, CEGIS2, CEGIS3}. %, we use similar approach as MaRVeL's~\cite{MARVEL}. 
