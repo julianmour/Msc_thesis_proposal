@@ -15,7 +15,7 @@ Two main categories of verifiers are:
     Such verifiers tend to have long execution time and thus do not scale to large networks.
         In our preliminary research, we rely on a complete verifier~\cite{MIPVERIFY}.
     \item Incomplete verifiers: may also return \emph{unknown} for a given property.
-    This allows the, to rely on approximate techniques which scale better~\cite{INCOMPLETE1, INCOMPLETE2}.
+    This allows them to rely on approximate techniques which scale better~\cite{INCOMPLETE1, INCOMPLETE2}.
 \end{itemize}
 
 \subsection{Adversarial Attacks in Multi-Label Classification}
@@ -28,7 +28,7 @@ We focus on the latter goal, also known as untargeted attack.
 %Our property focuses on giving a robust neighborhood against a type of untargeted attacks;
 %Such attacks that aim to bring a specific correct label's score to not be in the top picked labels.
     Song et al.~\cite{MULTIlABEL1} introduce targeted white-box attacks for multi-label classification.
-    They proposed a method to exploit label-ranking relationships based framework to attack multi-object ranking algorithms.
+    They propose a method to exploit label-ranking relationships based framework to attack multi-object ranking algorithms.
     They approach the problem by formulating it as an optimization problem that meets the attack target while ensuring that the perturbation will not be too obvious, and then execute gradient descent.
     Through experimentation, they discover that they could manipulate a multi-label classifier into producing any set of labels for a given input by adding an adversarial perturbation.
 %    \Dana{what is the discovery? sounds like a solution to their optimization function}.
@@ -36,15 +36,15 @@ We focus on the latter goal, also known as untargeted attack.
     They solve the problem by transforming the optimization problem of finding adversarial perturbations into a linear programming problem, which can be solved efficiently.
     Yang et al.~\cite{MULTIlABEL3} explore the potential for misclassification risk in multi-label classifiers, particularly in worst-case scenarios.
     They approach the problem by formulating it as a bi-level set function optimization problem and use random greedy search to find an approximate solution.
-    More recently, Hu et al.~\cite{Hu_2021_ICCV} presented a method to disrupt the $top-k$ labels of multi-label classifiers, based on novel loss functions, under both untargeted and targeted attacks.
-    Melacci et al.~\cite{melacci:hal-02971233} suggested a multi-label attack approach with a domain knowledge-constrained classifier, where the domain knowledge is on the relationship of the considered classes.
+    More recently, Hu et al.~\cite{Hu_2021_ICCV} present a method to disrupt the top-$k$ labels of multi-label classifiers, based on novel loss functions, under both untargeted and targeted attacks.
+    Melacci et al.~\cite{melacci:hal-02971233} suggest a multi-label attack approach with a domain knowledge-constrained classifier, where the domain knowledge is on the relationship of the considered classes.
     This approach enables the prediction of adversarial examples within the distribution of the training data.
     Kong et al.~\cite{9857594} were the first to develop a differential evolution (DE) algorithm that can effectively generate multi-label adversarial examples.
-    They achieved a black-box attack that does not need to access model parameters, and only uses model outputs to generate adversarial examples.
+    They achieve a black-box attack that does not need to access model parameters and only uses the model's outputs to generate adversarial examples.
     Mahmood et al.~\cite{mahmood2022effective} take into consideration label relationships, modeled by a knowledge graph.
     They propose a graph-consistent multi-label attack framework, which searches for small image perturbations that lead to misclassifying a desired target set while respecting label hierarchies.
-\Dana{there are only three works? we need at least six and ideally ten if there are.}
-\Julian{Added 4 more works (7 in total). Tried finding more but found them less relevant.}
+%\Dana{there are only three works? we need at least six and ideally ten if there are.}
+%\Julian{Added 4 more works (7 in total). Tried finding more but found them less relevant.}
 
 \subsection{Counterexample-Guided Synthesis}
 Counter example guided synthesis (CEGIS) is a technique used in formal verification and program synthesis to generate correct programs or system designs for given specifications.
