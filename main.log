@@ -1,7 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.2)  14 MAY 2023 05:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.2)  14 MAY 2023 05:10
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **./main.tex
 (main.tex
@@ -501,17 +500,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--58
  []
 
 [2]) (OurApproach.tex [3]) (PreResults.tex
-<108_80.png, id=132, 64.24pt x 64.24pt>
-File: 108_80.png Graphic file (type png)
-<use 108_80.png>
-Package pdftex.def Info: 108_80.png  used on input line 11.
+<3.png, id=132, 64.24pt x 64.24pt>
+File: 3.png Graphic file (type png)
+<use 3.png>
+Package pdftex.def Info: 3.png  used on input line 11.
 (pdftex.def)             Requested size: 90.5922pt x 90.59898pt.
 <arch_labeled.png, id=134, 905.18175pt x 376.40625pt>
 File: arch_labeled.png Graphic file (type png)
 <use arch_labeled.png>
 Package pdftex.def Info: arch_labeled.png  used on input line 18.
 (pdftex.def)             Requested size: 271.7835pt x 113.01463pt.
- [4 <./108_80.png (PNG copy)> <./arch_labeled.png>]
+ [4 <./3.png (PNG copy)> <./arch_labeled.png>]
 <neighborhoods_average_size.png, id=147, 462.528pt x 346.896pt>
 File: neighborhoods_average_size.png Graphic file (type png)
 <use neighborhoods_average_size.png>
@@ -541,15 +540,15 @@ Package pdftex.def Info: l0_defense_sensitivity_weights.png  used on input line
  75.
 (pdftex.def)             Requested size: 181.18439pt x 135.88702pt.
 ) (FutureRO.tex [5 <./neighborhoods_average_size.png> <./no_defense_fixed_weigh
-ts.png> <./no_defense_sensitivity_weights.png>]) (RelatedWork.tex [6 <./l0_defe
-nse_fixed_weights.png> <./l0_defense_sensitivity_weights.png>])
+ts.png> <./no_defense_sensitivity_weights.png>]) (RelatedWork.tex
+[6 <./l0_defense_fixed_weights.png> <./l0_defense_sensitivity_weights.png>])
 (main.bbl [7] [8] [9]) [10] (main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 740B38D7419FAAC581CF508C72423E7B;1498.
  ) 
 Here is how much of TeX's memory you used:
- 12130 strings out of 478351
- 199019 string characters out of 2834693
+ 12128 strings out of 478351
+ 198688 string characters out of 2834693
  511246 words of memory out of 3000000
  30277 multiletter control sequences out of 15000+600000
  479351 words of font info for 67 fonts, out of 8000000 for 9000
@@ -575,8 +574,7 @@ blic/amsfonts/cm/cmsy5.pfb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/julianmour/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/julianmour/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "C:/Users\julianmour\OneDrive - Technion\Documents\Research\P
-roposal\out\main.pdf" (10 pages, 529539 bytes).
+Output written on main.pdf (10 pages, 531249 bytes).
 PDF statistics:
  347 PDF objects out of 1000 (max. 8388607)
  92 named destinations out of 1000 (max. 500000)

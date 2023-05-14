@@ -1,0 +1,309 @@
+\begin{thebibliography}{10}
+
+\bibitem{PGD}
+Ludwig Schmidt Dimitris Tsipras Adrian~Vladu Aleksander~Madry,
+  Aleksandar~Makelov.
+\newblock Towards deep learning models resistant to adversarial attacks.
+\newblock {\em ICLR}, 2018.
+
+\bibitem{overapprox}
+Greg Anderson, Shankara Pailoor, Isil Dillig, and Swarat Chaudhuri.
+\newblock Optimization and abstraction: A synergistic approach for analyzing
+  neural network robustness.
+\newblock In {\em Proceedings of the 40th ACM SIGPLAN Conference on Programming
+  Language Design and Implementation}, PLDI 2019, page 731–744, New York, NY,
+  USA, 2019. Association for Computing Machinery.
+
+\bibitem{Boopathy_Weng_Chen_Liu_Daniel_2019}
+Akhilan Boopathy, Tsui-Wei Weng, Pin-Yu Chen, Sijia Liu, and Luca Daniel.
+\newblock Cnn-cert: An efficient framework for certifying robustness of
+  convolutional neural networks.
+\newblock {\em Proceedings of the AAAI Conference on Artificial Intelligence},
+  33(01):3240--3247, Jul. 2019.
+
+\bibitem{dvijotham2018dual}
+Krishnamurthy Dvijotham, Robert Stanforth, Sven Gowal, Timothy~A Mann, and
+  Pushmeet Kohli.
+\newblock A dual approach to scalable verification of deep networks.
+\newblock In {\em UAI}, volume~1, page~3, 2018.
+
+\bibitem{simplex-based}
+Yizhak~Yisrael Elboher, Justin Gottschlich, and Guy Katz.
+\newblock An abstraction-based framework for neural network verification.
+\newblock In Shuvendu~K. Lahiri and Chao Wang, editors, {\em Computer Aided
+  Verification}, pages 43--65, Cham, 2020. Springer International Publishing.
+
+\bibitem{ABSTRACTINTER}
+Markus Püschel Martin~Vechev Gagandeep~Singh, Timon~Gehr.
+\newblock An abstract domain for certifying neural networks.
+\newblock {\em ACM}, 2019.
+
+\bibitem{INCOMPLETE2}
+Matthew Mirman Markus Püschel Martin~Vechev Gagandeep~Singh, Timon~Gehr.
+\newblock Fast and effective robustness certification.
+\newblock {\em NeurIPS}, 2018.
+
+\bibitem{8418593}
+Timon Gehr, Matthew Mirman, Dana Drachsler-Cohen, Petar Tsankov, Swarat
+  Chaudhuri, and Martin Vechev.
+\newblock Ai2: Safety and robustness certification of neural networks with
+  abstract interpretation.
+\newblock In {\em 2018 IEEE Symposium on Security and Privacy (SP)}, pages
+  3--18, 2018.
+
+\bibitem{ref7}
+Ian~J. Goodfellow, Jonathon Shlens, and Christian Szegedy.
+\newblock Explaining and harnessing adversarial examples.
+\newblock {\em In ICLR}, 2015.
+
+\bibitem{MULTIlABEL1}
+Qingquan Song; Haifeng Jin; Xiao Huang;~Xia Hu.
+\newblock Multi-label adversarial perturbations.
+\newblock {\em IEEE}, 2018.
+
+\bibitem{Hu_2021_ICCV}
+Shu Hu, Lipeng Ke, Xin Wang, and Siwei Lyu.
+\newblock Tkml-ap: Adversarial attacks to top-k multi-label learning.
+\newblock In {\em Proceedings of the IEEE/CVF International Conference on
+  Computer Vision (ICCV)}, pages 7649--7657, October 2021.
+
+\bibitem{OracleGuided}
+Gulwani S. Seshia S.A. Tiwari~A. Jha, S.
+\newblock Oracle-guided component-based program synthesis.
+\newblock {\em ICSE}, 2010.
+
+\bibitem{DoubleMNIST}
+Gulwani S. Seshia S.A. Tiwari A.Sara Sabour Nicholas Frosst Geoffrey E.~Hinton
+  Jha, S.
+\newblock Dynamic routing between capsules.
+\newblock {\em NeurIPS}, 2017.
+
+\bibitem{MultiVul2}
+Neil~Gong Jinyuan~Jia, Wenjie~Qu.
+\newblock Multiguard: Provably robust multi-label classification against
+  adversarial examples.
+\newblock {\em Advances in Neural Information Processing Systems}, 2022.
+
+\bibitem{MARVEL}
+Anan Kabaha and Dana~Drachsler Cohen.
+\newblock Maximal robust neural network specifications via oracle-guided
+  numerical optimization.
+\newblock {\em VMCAI}, 2023.
+
+\bibitem{CEGIS2}
+Anan Kabaha and Dana Drachsler-Cohen.
+\newblock Boosting robustness verification of semantic feature neighborhoods.
+\newblock In Gagandeep Singh and Caterina Urban, editors, {\em Static
+  Analysis}, pages 299--324, Cham, 2022. Springer Nature Switzerland.
+
+\bibitem{COMPLETE}
+Shiqi Wang Yihan Wang Suman Jana Xue Lin Cho-Jui~Hsieh Kaidi~Xu, Huan~Zhang.
+\newblock Fast and complete: Enabling complete neural network verification with
+  rapid and massively parallel incomplete verifiers, 11 2020.
+
+\bibitem{Reluplex}
+Guy Katz, Clark Barrett, David~L. Dill, Kyle Julian, and Mykel~J. Kochenderfer.
+\newblock Reluplex: An efficient smt solver for verifying deep neural networks.
+\newblock In Rupak Majumdar and Viktor Kun{\v{c}}ak, editors, {\em Computer
+  Aided Verification}, pages 97--117, Cham, 2017. Springer International
+  Publishing.
+
+\bibitem{Marabou}
+Guy Katz, Derek~A. Huang, Duligur Ibeling, Kyle Julian, Christopher Lazarus,
+  Rachel Lim, Parth Shah, Shantanu Thakoor, Haoze Wu, Aleksandar Zelji{\'{c}},
+  David~L. Dill, Mykel~J. Kochenderfer, and Clark Barrett.
+\newblock The marabou framework for verification and analysis of deep neural
+  networks.
+\newblock In Isil Dillig and Serdar Tasiran, editors, {\em Computer Aided
+  Verification}, pages 443--452, Cham, 2019. Springer International Publishing.
+
+\bibitem{9857594}
+Linghao Kong, Wenjian Luo, Hongwei Zhang, Yang Liu, and Yuhui Shi.
+\newblock Evolutionary multi-label adversarial examples: An effective black-box
+  attack.
+\newblock {\em IEEE Transactions on Artificial Intelligence}, pages 1--12,
+  2022.
+
+\bibitem{ref15}
+Alexey Kurakin, Ian~J. Goodfellow, and Samy Bengio.
+\newblock Adversarial examples in the physical world.
+\newblock {\em In ICLR}, 2017.
+
+\bibitem{lazarus2022mixed}
+Christopher Lazarus and Mykel~J. Kochenderfer.
+\newblock A mixed integer programming approach for verifying properties of
+  binarized neural networks, 2022.
+
+\bibitem{CEGIS1}
+Changjiang Li, Shouling Ji, Haiqin Weng, Bo~Li, Jie Shi, Raheem Beyah, Shanqing
+  Guo, Zonghui Wang, and Ting Wang.
+\newblock Towards certifying the asymmetric robustness for neural networks:
+  Quantification and applications.
+\newblock {\em IEEE Transactions on Dependable and Secure Computing},
+  19(6):3987--4001, 2022.
+
+\bibitem{CEGIS3}
+Chen Liu, Ryota Tomioka, and Volkan Cevher.
+\newblock On certifying non-uniform bounds against adversarial attacks.
+\newblock In Kamalika Chaudhuri and Ruslan Salakhutdinov, editors, {\em
+  Proceedings of the 36th International Conference on Machine Learning},
+  volume~97 of {\em Proceedings of Machine Learning Research}, pages
+  4072--4081. PMLR, 09--15 Jun 2019.
+
+\bibitem{ref56}
+Aleksander Madry, Aleksandar Makelov, Ludwig Schmidt, Dimitris Tsipras, and
+  Adrian Vladu.
+\newblock Towards deep learning models resistant to adversarial attacks.
+\newblock {\em In ICLR}, 2018.
+
+\bibitem{mahmood2022effective}
+Hassan Mahmood and Ehsan Elhamifar.
+\newblock Towards effective multi-label recognition attacks via knowledge graph
+  consistency, 2022.
+
+\bibitem{melacci:hal-02971233}
+Stefano Melacci, Gabriele Ciravegna, Angelo Sotgiu, Ambra Demontis, Battista
+  Biggio, Marco Gori, and Fabio Roli.
+\newblock {Can Domain Knowledge Alleviate Adversarial Attacks in Multi-Label
+  Classifiers?}
+\newblock working paper or preprint, October 2020.
+
+\bibitem{IMAGETAGGING}
+Kilian~Weinberger Minmin~Chen, Alice~Zheng.
+\newblock Fast image tagging.
+\newblock {\em Proceedings of the 30th International Conference on Machine
+  Learning}, 2013.
+
+\bibitem{MLSYS2021_ca46c1b9}
+Christoph M\"{u}ller, Fran\c{c}ois Serre, Gagandeep Singh, Markus P\"{u}schel,
+  and Martin Vechev.
+\newblock Scaling polyhedral neural network verification on gpus.
+\newblock In A.~Smola, A.~Dimakis, and I.~Stoica, editors, {\em Proceedings of
+  Machine Learning and Systems}, volume~3, pages 733--746, 2021.
+
+\bibitem{ObjectDetection}
+Poggio~T Papageorgiou, C.
+\newblock A trainable system for object detection.
+\newblock {\em International Journal of Computer Vision}, 2000.
+
+\bibitem{qin2019verification}
+Chongli Qin, Krishnamurthy, Dvijotham, Brendan O'Donoghue, Rudy Bunel, Robert
+  Stanforth, Sven Gowal, Jonathan Uesato, Grzegorz Swirszcz, and Pushmeet
+  Kohli.
+\newblock Verification of non-linear specifications for neural networks, 2019.
+
+\bibitem{raghunathan2020certified}
+Aditi Raghunathan, Jacob Steinhardt, and Percy Liang.
+\newblock Certified defenses against adversarial examples, 2020.
+
+\bibitem{MultiVul1}
+Bernhard~Schölkopf Rohit~Babbar.
+\newblock Adversarial extreme multi-label classification, 2018.
+
+\bibitem{NEURIPS2019_246a3c55}
+Hadi Salman, Greg Yang, Huan Zhang, Cho-Jui Hsieh, and Pengchuan Zhang.
+\newblock A convex relaxation barrier to tight robustness verification of
+  neural networks.
+\newblock In H.~Wallach, H.~Larochelle, A.~Beygelzimer, F.~d\textquotesingle
+  Alch\'{e}-Buc, E.~Fox, and R.~Garnett, editors, {\em Advances in Neural
+  Information Processing Systems}, volume~32. Curran Associates, Inc., 2019.
+
+\bibitem{FacialRec}
+Xiaojiang Peng Jianfei Yang Zhaoyang Zeng Yu~Qiao Sijie~Ji, Kai~Wang.
+\newblock Multiple transfer learning and multi-label balanced training
+  strategies for facial au detection in the wild.
+\newblock {\em Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR) Workshops}, 2020.
+
+\bibitem{VANILLAGRADIENT}
+Andrea~Vedaldi Simonyan, Karen and Andrew Zisserman.
+\newblock Deep inside convolutional networks: Visualising image classification
+  models and saliency maps., 2013.
+
+\bibitem{NEURIPS2019_0a9fdbb1}
+Gagandeep Singh, Rupanshu Ganvir, Markus P\"{u}schel, and Martin Vechev.
+\newblock Beyond the single neuron convex barrier for neural network
+  certification.
+\newblock In H.~Wallach, H.~Larochelle, A.~Beygelzimer, F.~d\textquotesingle
+  Alch\'{e}-Buc, E.~Fox, and R.~Garnett, editors, {\em Advances in Neural
+  Information Processing Systems}, volume~32. Curran Associates, Inc., 2019.
+
+\bibitem{linearOverapprox}
+Gagandeep Singh, Timon Gehr, Markus P\"{u}schel, and Martin Vechev.
+\newblock An abstract domain for certifying neural networks.
+\newblock {\em Proc. ACM Program. Lang.}, 3(POPL), jan 2019.
+
+\bibitem{singh2018robustness}
+Gagandeep Singh, Timon Gehr, Markus Püschel, and Martin Vechev.
+\newblock Robustness certification with refinement.
+\newblock In {\em International Conference on Learning Representations}, 2019.
+
+\bibitem{MultiVul3}
+Angelo Sotgiu Ambra Demontis Battista Biggio Marco~Gori Stefano~Melacci,
+  Gabriele~Ciravegna.
+\newblock Domain knowledge alleviates adversarial attacks in multi-label
+  classifiers.
+\newblock {\em IEEE}, 2022.
+
+\bibitem{L0}
+Bernt~Schiele Sukrut~Rao, David~Stutz.
+\newblock Adversarial training against location-optimized adversarial patches.
+\newblock {\em ECCV}, 2020.
+
+\bibitem{szegedy2014intriguing}
+Christian Szegedy, Wojciech Zaremba, Ilya Sutskever, Joan Bruna, Dumitru Erhan,
+  Ian Goodfellow, and Rob Fergus.
+\newblock Intriguing properties of neural networks, 2014.
+
+\bibitem{ref17}
+Pedro Tabacof and Eduardo Valle.
+\newblock Exploring the space of adversarial images.
+\newblock {\em In IJCNN}, 2016.
+
+\bibitem{INCOMPLETE1}
+Timon Gehr; Matthew Mirman; Dana Drachsler-Cohen; Petar Tsankov; Swarat
+  Chaudhuri;~Martin Vechev.
+\newblock Safety and robustness certification of neural networks with abstract
+  interpretation.
+\newblock {\em IEEE}, 2018.
+
+\bibitem{MIPVERIFY}
+Russ~Tedrake Vincent~Tjeng, Kai~Xiao.
+\newblock Evaluating robustness of neural networks with mixed integer
+  programming.
+\newblock {\em ICLR}, 2019.
+
+\bibitem{NEURIPS2018_2ecd2bd9}
+Shiqi Wang, Kexin Pei, Justin Whitehouse, Junfeng Yang, and Suman Jana.
+\newblock Efficient formal safety analysis of neural networks.
+\newblock In S.~Bengio, H.~Wallach, H.~Larochelle, K.~Grauman, N.~Cesa-Bianchi,
+  and R.~Garnett, editors, {\em Advances in Neural Information Processing
+  Systems}, volume~31. Curran Associates, Inc., 2018.
+
+\bibitem{NEURIPS2021_fac7fead}
+Shiqi Wang, Huan Zhang, Kaidi Xu, Xue Lin, Suman Jana, Cho-Jui Hsieh, and
+  J.~Zico Kolter.
+\newblock Beta-crown: Efficient bound propagation with per-neuron split
+  constraints for neural network robustness verification.
+\newblock In M.~Ranzato, A.~Beygelzimer, Y.~Dauphin, P.S. Liang, and J.~Wortman
+  Vaughan, editors, {\em Advances in Neural Information Processing Systems},
+  volume~34, pages 29909--29921. Curran Associates, Inc., 2021.
+
+\bibitem{MULTIlABEL3}
+Zhuo Yang, Yufei Han, and Xiangliang Zhang.
+\newblock Characterizing the evasion attackability of multi-label classifiers.
+\newblock {\em Proceedings of the AAAI Conference on Artificial Intelligence},
+  35(12):10647--10655, May 2021.
+
+\bibitem{ref29}
+Xiaoyong Yuan, Pan He, Qile Zhu, and Xiaolin Li.
+\newblock Adversarial examples: Attacks and defenses for deep learning.
+\newblock {\em In {IEEE} Trans. Neural Networks Learn. Syst}, 2019.
+
+\bibitem{MULTIlABEL2}
+Nan Zhou, Wenjian Luo, Xin Lin, Peilan Xu, and Zhenya Zhang.
+\newblock Generating multi-label adversarial examples by linear programming.
+\newblock In {\em 2020 International Joint Conference on Neural Networks
+  (IJCNN)}, pages 1--8, 2020.
+
+\end{thebibliography}

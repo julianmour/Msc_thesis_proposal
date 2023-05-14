@@ -8,14 +8,14 @@ The multi-classifier's goal is to return the correct two digits. % from ten clas
 An example of an image is shown in Figure~\ref{fig:double-mnist-sample}. %, where the digit $4$ is the target object and the digit $9$ is the non-target object.
 \begin{figure}
     \centering
-    \includegraphics[width=0.3\textwidth]{3.png}
+    \includegraphics[width=0.2\textwidth]{108_80.png}
     \caption{DOUBLE-MNIST sample}
     \label{fig:double-mnist-sample}
 \end{figure}
 We ran our algorithm on three different CNN multi-label DOUBLE-MNIST classifiers, all with the same architecture (Figure~\ref{fig:arch_labeled}) but a different training procedure:
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\textwidth]{arch_labeled.png}
+    \includegraphics[width=0.6\textwidth]{arch_labeled.png}
     \caption{Classifiers' architecture - 2 Convolutional layers, 1 Max-Pool layer and 1 FC layer}
     \label{fig:arch_labeled}
 \end{figure}
@@ -23,13 +23,23 @@ We ran our algorithm on three different CNN multi-label DOUBLE-MNIST classifiers
 %While the three of them solve the same classification problem, they differ in their training process:
 \begin{itemize}
     \item Without defense. %- This network is trained regularly on the original DOUBLE-MNIST training dataset, without additional processing done to the training dataset.
-      \item With an $L_0$ defense: this defense relies on the following data augmentation.
+      \item With an $L_0$ defense: This defense relies on the following data augmentation.
     Before forwarding a training sample to the network, we add random noise to the image in the form of a black rectangle.
-        \item With an $L_{\infty}$ defense: using the Projected Gradient Descent (PGD) defense~\cite{PGD}.
+        \item With an $L_{\infty}$ defense: Using the Projected Gradient Descent (PGD) defense~\cite{PGD}.
     This defense also involves training the model with adversarial examples, but unlike the $L_0$ defense, the added perturbations are a small value and can be anywhere in the input.
     %The PGD generated adversarial examples are achieved by trying to increase the model's loss function as much as possible.
     %Therefore, training the model with such adversarial examples should make the network more robust.
 \end{itemize} 
+
+To compare between the robustness of the different models, we ran our program on each, with 30 different images.
+Result show that adding an $L_{\infty}$ defense increases the robustness in layered neighbourhoods, and using sensitivity weights as cutting weights helps find bigger robust neighborhoods as well.
+The average size of the neighborhoods returned by our program is presented in Figure~\ref{fig:neighborhoods_average_size}.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\textwidth]{neighborhoods_average_size.png}
+    \caption{Neighborhoods Average Size}
+    \label{fig:neighborhoods_average_size}
+\end{figure}
 
   In Figure~\ref{fig:No defense} we present results of our program ran on a classifier trained without defense, and a single image, as a heatmap representing the epsilons per each layer.
     \begin{figure}
