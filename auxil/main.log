@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.2)  14 MAY 2023 05:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.2)  15 MAY 2023 00:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -266,6 +266,14 @@ Package caption Info: New subtype `subfigure' on input line 239.
 Package caption Info: New subtype `subtable' on input line 239.
 \c@subtable=\count276
 )
+(C:\Users\julianmour\AppData\Local\Programs\MiKTeX\tex/latex/cjhebrew\cjhebrew.
+sty
+Package: cjhebrew 2017/03/06 v. 0.2a cjhebrew Hebrew Typesetting System
+
+(C:\Users\julianmour\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.s
+ty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+))
 (C:\Users\julianmour\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count277
@@ -393,24 +401,24 @@ File: l3backend-pdftex.def 2022-04-20 L3 backend support: PDF output (pdfTeX)
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -472,7 +480,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 24.
+Package hyperref Info: Link coloring ON on input line 25.
  (main.out) (main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
@@ -480,105 +488,166 @@ Package hyperref Info: Link coloring ON on input line 24.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 36.
+ (CoverPage.tex
+
+CoverPage.tex:37: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37         \\
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1
+
+{C:/Users/julianmour/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}])
+(intro.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 63.
 
 
 (C:\Users\julianmour\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 36.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 63.
 
 
 (C:\Users\julianmour\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-(intro.tex [1
-
-{C:/Users/julianmour/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]) (probD
-ef.tex
+)) (probDef.tex
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.13 \paragraph
+               {Multi-label classifier} [1]
 Underfull \hbox (badness 10000) in paragraph at lines 56--58
 
  []
 
-[2]) (OurApproach.tex [3]) (PreResults.tex
-<108_80.png, id=132, 64.24pt x 64.24pt>
+) (OurApproach.tex [2] [3]) (PreResults.tex
+<108_80.png, id=137, 64.24pt x 64.24pt>
 File: 108_80.png Graphic file (type png)
 <use 108_80.png>
-Package pdftex.def Info: 108_80.png  used on input line 11.
-(pdftex.def)             Requested size: 90.5922pt x 90.59898pt.
-<arch_labeled.png, id=134, 905.18175pt x 376.40625pt>
+Package pdftex.def Info: 108_80.png  used on input line 13.
+(pdftex.def)             Requested size: 108.71173pt x 108.72035pt.
+<arch_labeled.png, id=138, 905.18175pt x 376.40625pt>
 File: arch_labeled.png Graphic file (type png)
 <use arch_labeled.png>
-Package pdftex.def Info: arch_labeled.png  used on input line 18.
+Package pdftex.def Info: arch_labeled.png  used on input line 19.
 (pdftex.def)             Requested size: 271.7835pt x 113.01463pt.
- [4 <./108_80.png (PNG copy)> <./arch_labeled.png>]
-<neighborhoods_average_size.png, id=147, 462.528pt x 346.896pt>
+<neighborhoods_average_size.png, id=142, 462.528pt x 346.896pt>
 File: neighborhoods_average_size.png Graphic file (type png)
 <use neighborhoods_average_size.png>
-Package pdftex.def Info: neighborhoods_average_size.png  used on input line 39.
+Package pdftex.def Info: neighborhoods_average_size.png  used on input line 47.
 
-(pdftex.def)             Requested size: 181.18439pt x 135.88702pt.
-<no_defense_fixed_weights.png, id=149, 462.528pt x 346.896pt>
+(pdftex.def)             Requested size: 317.07614pt x 237.81816pt.
+<no_defense_fixed_weights.png, id=144, 462.528pt x 346.896pt>
 File: no_defense_fixed_weights.png Graphic file (type png)
 <use no_defense_fixed_weights.png>
-Package pdftex.def Info: no_defense_fixed_weights.png  used on input line 49.
+Package pdftex.def Info: no_defense_fixed_weights.png  used on input line 64.
 (pdftex.def)             Requested size: 181.18439pt x 135.88702pt.
-<no_defense_sensitivity_weights.png, id=150, 462.528pt x 346.896pt>
+<no_defense_sensitivity_weights.png, id=145, 462.528pt x 346.896pt>
 File: no_defense_sensitivity_weights.png Graphic file (type png)
 <use no_defense_sensitivity_weights.png>
 Package pdftex.def Info: no_defense_sensitivity_weights.png  used on input line
- 56.
+ 71.
 (pdftex.def)             Requested size: 181.18439pt x 135.88702pt.
-<l0_defense_fixed_weights.png, id=152, 462.528pt x 346.896pt>
+<l0_defense_fixed_weights.png, id=146, 462.528pt x 346.896pt>
 File: l0_defense_fixed_weights.png Graphic file (type png)
 <use l0_defense_fixed_weights.png>
-Package pdftex.def Info: l0_defense_fixed_weights.png  used on input line 68.
+Package pdftex.def Info: l0_defense_fixed_weights.png  used on input line 83.
 (pdftex.def)             Requested size: 181.18439pt x 135.88702pt.
-<l0_defense_sensitivity_weights.png, id=153, 462.528pt x 346.896pt>
+<l0_defense_sensitivity_weights.png, id=147, 462.528pt x 346.896pt>
 File: l0_defense_sensitivity_weights.png Graphic file (type png)
 <use l0_defense_sensitivity_weights.png>
 Package pdftex.def Info: l0_defense_sensitivity_weights.png  used on input line
- 75.
+ 90.
 (pdftex.def)             Requested size: 181.18439pt x 135.88702pt.
-) (FutureRO.tex [5 <./neighborhoods_average_size.png> <./no_defense_fixed_weigh
-ts.png> <./no_defense_sensitivity_weights.png>]) (RelatedWork.tex [6 <./l0_defe
-nse_fixed_weights.png> <./l0_defense_sensitivity_weights.png>])
-(main.bbl [7] [8] [9]) [10] (main.aux)
+<lInf_defense_fixed_weights.png, id=148, 462.528pt x 346.896pt>
+File: lInf_defense_fixed_weights.png Graphic file (type png)
+<use lInf_defense_fixed_weights.png>
+Package pdftex.def Info: lInf_defense_fixed_weights.png  used on input line 101
+.
+(pdftex.def)             Requested size: 181.18439pt x 135.88702pt.
+<lInf_defense_sensitivity_weights.png, id=149, 462.528pt x 346.896pt>
+File: lInf_defense_sensitivity_weights.png Graphic file (type png)
+<use lInf_defense_sensitivity_weights.png>
+Package pdftex.def Info: lInf_defense_sensitivity_weights.png  used on input li
+ne 108.
+(pdftex.def)             Requested size: 181.18439pt x 135.88702pt.
+
+
+LaTeX Warning: Reference `fig:LInf defense' on page 4 undefined on input line 1
+19.
+
+) (FutureRO.tex [4 <./108_80.png (PNG copy)> <./arch_labeled.png>] [5 <./neighb
+orhoods_average_size.png> <./no_defense_fixed_weights.png> <./no_defense_sensit
+ivity_weights.png> <./l0_defense_fixed_weights.png> <./l0_defense_sensitivity_w
+eights.png>]) (RelatedWork.tex [6 <./lInf_defense_fixed_weights.png> <./lInf_de
+fense_sensitivity_weights.png>])
+
+main.tex:56: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56 \bibliography
+                  {bibliography}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(main.bbl [7] [8]) [9] (main.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 740B38D7419FAAC581CF508C72423E7B;1498.
  ) 
 Here is how much of TeX's memory you used:
- 12130 strings out of 478351
- 199019 string characters out of 2834693
- 511246 words of memory out of 3000000
- 30277 multiletter control sequences out of 15000+600000
- 479351 words of font info for 67 fonts, out of 8000000 for 9000
+ 12207 strings out of 478351
+ 201322 string characters out of 2834693
+ 521508 words of memory out of 3000000
+ 30341 multiletter control sequences out of 15000+600000
+ 480091 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,10n,77p,746b,749s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,10n,77p,746b,753s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\julianmour\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600
-\tcrm1000.pk><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmbx10.pfb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/julianmour/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/julianmour/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/
-julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.p
-fb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmmi7.pfb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmr10.pfb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/julianmour/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/julianmour/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/ju
-lianmour/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-<C:/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmsy5.pfb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/julianmour/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/julianmour/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+\tcrm0600.pk> <C:\Users\julianmour\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappe
+n/ec/dpi600\tcrm1000.pk>{C:/Users/julianmour/AppData/Local/Programs/MiKTeX/font
+s/enc/dvips/cjhebrew/cjhebltx.enc}<C:/Users/julianmour/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/cjhebrew/cjhebltx.pfb><C:/Users/julianmour/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/julianmo
+ur/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/
+Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mex10.pfb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmmi10.pfb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/julianmour/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/julianmour/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/julian
+mour/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
+/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmr17.pfb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmr6.pfb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmr7.pfb><C:/Users/julianmour/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/julianmour/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/julianmou
+r/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Us
+ers/julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cms
+y7.pfb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmsy8.pfb><C:/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmti10.pfb><C:/Users/julianmour/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Users/julianmour/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 Output written on "C:/Users\julianmour\OneDrive - Technion\Documents\Research\P
-roposal\out\main.pdf" (10 pages, 529539 bytes).
+roposal\out\main.pdf" (10 pages, 626424 bytes).
 PDF statistics:
- 347 PDF objects out of 1000 (max. 8388607)
- 92 named destinations out of 1000 (max. 500000)
- 108 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 375 PDF objects out of 1000 (max. 8388607)
+ 91 named destinations out of 1000 (max. 500000)
+ 118 words of extra memory for PDF output out of 10000 (max. 10000000)
 

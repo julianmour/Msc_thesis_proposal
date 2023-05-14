@@ -44,7 +44,7 @@ $l_d^{x,o} = \{p \in [n]\times [m] \mid dist(p, P_o^x) = d\}$.
 Given an image $x$ and a non-target object $o_{nt}$ whose pixel set is $P_{nt}$, the set of layers is $L_x^{o_{nt}} = \{l_0^{x, o_{nt}}, l_1^{x, o_{nt}}, \ldots, l_r^{x, o_{nt}}\}$, where $r$ is the maximal distance of a pixel in $x$ to $P_{nt}$. %number of layers around $o_{nt}$ covering all pixels in $x$.
 %\Dana{what is $r$?it's not defined. is it wrt the target object? the image dimensions?}\Dana{add $P_{NT}$ to layers as superscript}
 
-\paragraph{A layered neighborhood} Given an image $x$, the non-target object's pixels ${P_{o_{nt}}^x}$ and a series of maximal allowed perturbation for every layer $\epsilon=(\epsilon_0,\ldots,\epsilon_r)$, a layered neighborhood ${N^{o_{nt}}_\epsilon}(x)$ is the set of all images whose perturbation at layer $d$ is bounded by the respective perturbation limit:
+\paragraph{A layered neighborhood}\label{par:layeredneighborhood} Given an image $x$, the non-target object's pixels ${P_{o_{nt}}^x}$ and a series of maximal allowed perturbation for every layer $\epsilon=(\epsilon_0,\ldots,\epsilon_r)$, a layered neighborhood ${N^{o_{nt}}_\epsilon}(x)$ is the set of all images whose perturbation at layer $d$ is bounded by the respective perturbation limit:
 %\Dana{complete in words and mathematically}.
 \begin{gather*}
     {N^{o_{nt}}_\epsilon}(x) = \{x' \in \mathbb{R}^{n \times m} \mid \forall 0\leq d\leq r\ \forall (i,j)\in l_d^{x,o_{nt}}: |x'_{i,j} - x_{i,j}|<\epsilon_d\}
