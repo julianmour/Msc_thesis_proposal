@@ -35,12 +35,12 @@ We ran our algorithm on three different CNN multi-label DOUBLE-MNIST classifiers
     %Therefore, training the model with such adversarial examples should make the network more robust.
 \end{itemize} 
 
-To compare between the robustness of the models, we ran our algorithm on each of them, for a set of 30 images $X$.
+To compare between the robustness of the models, we ran our algorithm on each of them, for a set of 30 images.
 We run our algorithm twice, once for each cutting weights type (fixed and based on sensitivity).
 We measure the average unweighted neighborhood size defined as $\sum_{i=0}^{r}{{\epsilon_i}^*}$.
 %$\frac{\sum_{x \in X}{||{N^{o_{nt}}_\epsilon}(x)||}}{|X|}$ (see Paragraph~\ref{par:layeredneighborhood}).
 %\Dana{complete the math computation}.
-We also measure the average execution time for a single image, which is about 75 minutes, but can reach up to 4 hours for big neighborhoods.
+We also measure the average execution time for a single image, which is about 75 minutes, but can reach up to 4 hours for large neighborhoods.
 %\Dana{complete}.
 \begin{figure}
     \centering
@@ -56,6 +56,13 @@ This is expected because our attack model focuses on the $L_{\infty}$ norm.
 %The average size of the neighborhoods returned by our program is presented in Figure~\ref{fig:neighborhoods_average_size}.
 %
 
+
+Figure~\ref{fig:No defense} demonstrates the difference between the types of the cutting weights.
+  For a given image, the undefended classifier and a cutting weight type, we show the heat map corresponding to the synthesized layered neighborhood.
+  Figure~\ref{fig:L0 defense} and Figure~\ref{fig:LInf defense} are similar but for the $L_0$ defended network
+   and the $L_{\infty}$ defended network.
+  In all models, the heat maps show a larger neighborhood when using the sensitivity weights, as expected.
+  The heat maps also show larger epsilons for layers closer to the non-target object, in line with our cutting weights. 
 %\Dana{complete}.
     \begin{figure}
          \centering
@@ -112,10 +119,3 @@ This is expected because our attack model focuses on the $L_{\infty}$ norm.
          \caption{$L_{\infty}$ Defense}
          \label{fig:LInf defense}
     \end{figure}
-
-Figure~\ref{fig:No defense} demonstrates the difference between the types of the cutting weights.
-  For a given image, the undefended classifier and a cutting weight type, we show the heat map corresponding to synthesized layered neighborhood.
-  Figure~\ref{fig:L0 defense} is similar but for the $L_0$ defended network.
-  Figure~\ref{fig:LInf defense} is similar but for the $L_{\infty}$ defended network.
-  In all models, the heat maps show a slightly bigger neighborhood when using the sensitivity weights method, matching our expectations.
-  We also see bigger epsilons for layers closer to the non-target object, matching the chosen weight vector defining the size.
