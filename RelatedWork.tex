@@ -47,9 +47,9 @@ We focus on the latter goal, also known as untargeted attack.
 %\Julian{Added 4 more works (7 in total). Tried finding more but found them less relevant.}
 
 \subsection{Counterexample-Guided Synthesis}
-Counter example guided synthesis (CEGIS) is a technique used in formal verification and program synthesis to generate correct programs or system designs for given specifications.
+Counter example guided inductive synthesis (CEGIS) is a technique used in formal verification and program synthesis to generate correct programs or system designs for given specifications.
 CEGIS iteratively searches for a candidate, checks with an oracle whether the candidate satisfies the specification, and if not relies on counterexamples to refine the search space and guide the synthesis process.
 In this research, we use CEGIS to recover the search for a robust neighborhood after reaching a non-robust neighborhood. %desired epsilons sequence that will define a robust maximal layer-neighborhood;
-In our context, the specification is a robust layer-neighborhood, the oracle is the verifier, and the counterexamples are the weakest points.
+In our context, the specification is a robust layered neighborhood, the oracle is the verifier, and the counterexamples are the weakest points.
 %We submit several queries to a verifier in each iteration and update the epsilons sequence accordingly, given the counterexamples.
-Previous work also used CEGIS to find maximal robust neighborhoods~\cite{CEGIS1, MARVEL, CEGIS2, CEGIS3}. %, we use similar approach as MaRVeL's~\cite{MARVEL}. 
+Some previous work also uses CEGIS to find maximal robust neighborhoods~\cite{CEGIS1, MARVEL, CEGIS2, CEGIS3}. %, we use similar approach as MaRVeL's~\cite{MARVEL}. 
