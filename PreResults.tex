@@ -27,7 +27,7 @@ We ran our algorithm on three different CNN multi-label DOUBLE-MNIST classifiers
 %While the three of them solve the same classification problem, they differ in their training process:
 \begin{itemize}[nosep,nolistsep]
     \item Without defense. %- This network is trained regularly on the original DOUBLE-MNIST training dataset, without additional processing done to the training dataset.
-      \item With an $L_0$ defense: This defense relies on the following data augmentation.
+      \item With an $L_0$ defense: This defense relies on the following data augmentation~\cite{L0}.
     Before forwarding a training sample to the network, we add random noise to the image in the form of a black rectangle.
         \item With an $L_{\infty}$ defense: Using the Projected Gradient Descent (PGD) defense~\cite{PGD}.
     This defense also involves training the model with adversarial examples, but unlike the $L_0$ defense, the added perturbations are a small value and can be anywhere in the input.

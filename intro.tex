@@ -67,8 +67,11 @@ Results show that the latter model is the most robust. %without a defense and wi
 %We present the results of the program on each classifier and a single image as a heatmap representing the sequence of epsilons - one epsilon per layer.
 \paragraph{Future goals}
 As part of the thesis, we intend to improve our algorithm by reducing the number of queries to the verifier, and thereby shortening the execution time.
-To this end, we plan to use faster verifiers for some of the queries. % where robustness/non-robustness can still be determined.
-We also plan to rely on sensitive layers, to dynamically update the weight vector with the goal of identifying larger robust neighborhoods. %where the network can handle bigger perturbations.
+To this end, we plan to use faster verifiers for some queries. % where robustness/non-robustness can still be determined.
+In addition, we intend to increase the size of robust neighborhoods by developing optimal cutting weights, and expand more robust layers on the expense of sensitive ones, thereby maximizing the neighborhood size and improving the network's robustness against perturbations.
+We will also consider more complex datasets, such as road images that will allow for a more comprehensive evaluation of the algorithm's performance, enabling insights into its applicability in real-world scenarios.
+Lastly, we plan on inferring explanations that generalize the relations between objects in multi-label classifiers.
+%We also plan to increase the size of the robust neighborhoods by relying on sensitive layers, to dynamically update the weight vector with the goal of identifying larger robust neighborhoods. %where the network can handle bigger perturbations.
 %\Dana{compelte how you think you'll do it}
 %We also hope to achieve a better understanding of the vulnerability of multi-label classifiers to perturbations and the relation between several class objects in a multi-labeled image.
 
