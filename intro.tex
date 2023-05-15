@@ -21,7 +21,7 @@ For (single-label) classifiers, a popular definition is \emph{local robustness}.
 At high-level, given an image classifier, an input to the classifier, and a perturbation limit, the classifier is locally robust if perturbing the given input up to the given limit does not change the network's classification.
 The set of perturbed inputs is called the input's \emph{neighborhood}.
 %\Dana{explain why the straight forward extension of the definition is problematic}.
-In multi-label classification, where inputs are assigned to several labels, local robustness can be defined in various ways. For example, one can require that a network is robust if all labels remain or alternatively require only a subset of labels to remain unchanged.
+In multi-label classification, where inputs are assigned to several labels, local robustness can be defined in various ways. For example, one can require that a network is robust if it returns all labels as returned for the given input or alternatively require only that it returns a certain subset of labels.
 %Is a perturbed input allowed to change some correct labels in a locally robust classifier?
 %Or maybe none are allowed to change?
 Even given a suitable definition, verifying multi-label classifiers is challenging because they tend to be deeper and more complex than single-label classifiers.
@@ -35,7 +35,7 @@ For this setting, we propose a new attack model and a corresponding local robust
   Namely, the property aims to maximize the perturbation size and the manipulated objects' surrounding area.
   %is defined as follows: Given a multi-label classifier, an image showing several objects, a set of target objects, and a perturbation limit, the network is robust if perturbing the given objects up to the given limit does not change the network's classification of the target objects.
 %\Dana{complete as in the previous sentence}.
-This definition allows one to understand how changing a specific object in a multi-labeled image affects another's classification in a multi-label classifiers and identify their robustness relation.
+This definition allows one to understand how changing a specific object in a multi-labeled image affects another object's classification in a multi-label classifiers and identify their robustness relation.
 %\Dana{complete the motivation to this definition}.
 For simplicity's sake, we assume the image shows two objects, the target object and the perturbed object.
  %want to explore the robustness of different multi-label classifiers in one class - the target class, while adding perturbation around another - the non-target class.
