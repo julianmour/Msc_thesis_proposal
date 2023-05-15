@@ -60,7 +60,7 @@ Given a weight vector $w = (w_0, w_1, \ldots, w_r)$ assigning a weight for each 
 %\textrm{s.t.} $C' = \{\arg i^{th}\max_{c' \in C}{F(x)_{c'}}_{i=1}^{k} = \{c_t, c_{nt}\}$,
 the goal is to compute a sequence of epsilons $\epsilon^* = ({\epsilon_0}^*, {\epsilon_1}^*, \ldots, {\epsilon_r}^*)$ satisfying:
 
-\begin{enumerate}
+\begin{enumerate}[nosep,nolistsep]
     \item $F$ is robust at ${N^{o_{nt}}_{\epsilon^*}}(x)$ with respect to $c_t$.
     \item For every $\epsilon'$ expanding $\epsilon^*$, ${N^{o_{nt}}_{\epsilon'}}(x)$ is not robust with respect to $c_t$.
     \item ${N^{o_{nt}}_{\epsilon^*}}(x)$ maximizes its size among all layered neighborhoods meeting (1) and (2).

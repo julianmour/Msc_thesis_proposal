@@ -9,7 +9,7 @@ However, this approach is suitable in case the weight vector poses a strict orde
 %Problem is this approach is very expensive in time hence inefficient.
 Instead, we aim to build on the oracle-guided numerical verification proposed in~\cite{MARVEL}, to obtain a scalable algorithm.
 Technically, our algorithm has three main components, that iteratively interact with one another:
-\begin{itemize}
+\begin{itemize}[nosep,nolistsep]
     \item A local robustness verifier: Given a classifier and a layered neighborhood ${N^{o}_\epsilon}(x)$ of an image $x$ and object $o$, it determines whether the classifier is robust in this neighborhood.
         \item A numerical optimizer: Given a classifier and a robust layered neighborhood, it attempts to expand the neighborhood into a larger robust neighborhood, with respect to the weight vector. %by expanding it more, as we intend to maximize the norm of the neighborhood.
     \item A counterexample-guided inductive synthesiser (CEGIS): Given a classifier and a \emph{non-robust} layer-neighborhood, it attempts to identify directions of the previously robust neighborhood that cannot be further expanded. 
@@ -80,7 +80,7 @@ We next provide details about the different components and explain the open chal
     $, where $ cw_x^{-1} = (1 - cw_0^x, 1 - cw_1^x, \ldots, 1 - cw_r^x)$. 
 %    \Dana{what is the $\odot$ operation?}
     We consider two definitions for the cutting weights:
-    \begin{itemize}
+    \begin{itemize}[nosep,nolistsep]
         \item Fixed weights shrinking the neighborhood more in layers that are far from the non-target object and less in layers that are close to it:
         \begin{gather*}
             cw_x = ({\frac{r}{r+1}}^5, {\frac{r-1}{r+1}}^5, {\frac{r-2}{r+1}}^5, \ldots, 0)
