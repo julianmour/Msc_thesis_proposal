@@ -5,7 +5,7 @@
 In this section, we define the problem we address.
 For simplicity's sake, all our definitions and algorithms focus on images with two objects -- the target one and the perturbed one -- but they can extend to multiple objects.
 %In general, we can discuss the problem with several target and non-target objects, but for simplicity we will focus on one object from each type.
-Informally, given a multi-label classifier, an image showing a target object, we aim to compute a robust layer-neighborhood, given for a target object (target class).
+Informally, given a multi-label classifier, an image showing a target object and a non-target object, we aim to compute a robust layered neighborhood.
 The neighborhood is defined by a sequence of epsilons representing the perturbation per layer.
 %Each layer is defined to be a set of pixels that share the same distance from a specific non-target object (non-target class) in the image.
 We begin with definitions and then define our problem.
