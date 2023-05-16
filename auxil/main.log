@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.2)  15 MAY 2023 13:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.7.2)  16 MAY 2023 11:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -519,12 +519,12 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.68 \paragraph
-               {Future goals} [1]) (probDef.tex [2]
+               {Future goals} [1]) (probDef.tex
 Underfull \hbox (badness 10000) in paragraph at lines 56--58
 
  []
 
-) (OurApproach.tex [3]) (PreResults.tex
+[2]) (OurApproach.tex [3]) (PreResults.tex
 <108_80.png, id=135, 64.24pt x 64.24pt>
 File: 108_80.png Graphic file (type png)
 <use 108_80.png>
@@ -576,12 +576,12 @@ File: lInf_defense_sensitivity_weights.png Graphic file (type png)
 Package pdftex.def Info: lInf_defense_sensitivity_weights.png  used on input li
 ne 115.
 (pdftex.def)             Requested size: 181.18439pt x 135.88702pt.
-) [5 <./108_80.png (PNG copy)> <./arch_labeled.png> <./neighborhoods_average_si
-ze.png>] (FutureRO.tex [6 <./no_defense_fixed_weights.png> <./no_defense_sensit
+) (FutureRO.tex [5 <./108_80.png (PNG copy)> <./arch_labeled.png> <./neighborho
+ods_average_size.png>] [6 <./no_defense_fixed_weights.png> <./no_defense_sensit
 ivity_weights.png> <./l0_defense_fixed_weights.png> <./l0_defense_sensitivity_w
-eights.png>]) (RelatedWork.tex
-[7 <./lInf_defense_fixed_weights.png> <./lInf_defense_sensitivity_weights.png>]
-) (main.bbl [8] [9] [10]
+eights.png> <./lInf_defense_fixed_weights.png> <./lInf_defense_sensitivity_weig
+hts.png>]) (RelatedWork.tex
+[7]) (main.bbl [8] [9] [10]
 Underfull \hbox (badness 6461) in paragraph at lines 242--247
 []\OT1/cmr/m/n/10.95 Angelo Sot-giu Am-bra De-mon-tis Bat-tista Big-gio Marco G
 ori Ste-fano Melacci,
@@ -594,11 +594,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  12535 strings out of 478351
  207254 string characters out of 2834693
- 517325 words of memory out of 3000000
+ 518325 words of memory out of 3000000
  30666 multiletter control sequences out of 15000+600000
  477401 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,10n,77p,746b,759s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 72i,10n,77p,746b,749s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\julianmour\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600
 \tcrm1095.pk>{C:/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
 /cjhebrew/cjhebltx.enc}<C:/Users/julianmour/AppData/Local/Programs/MiKTeX/fonts
@@ -622,7 +622,7 @@ ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/julianmour/AppData
 anmour/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10
 .pfb>
 Output written on "C:/Users\julianmour\OneDrive - Technion\Documents\Research\P
-roposal\out\main.pdf" (13 pages, 577496 bytes).
+roposal\out\main.pdf" (13 pages, 577316 bytes).
 PDF statistics:
  366 PDF objects out of 1000 (max. 8388607)
  94 named destinations out of 1000 (max. 500000)
